@@ -1,0 +1,39 @@
+name: Test X Scraper
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-scraper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Scraper Test
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          APIFY_API_KEY: ${{ secrets.APIFY_API_KEY }}
+          APIFY_API_KEY_2: ${{ secrets.APIFY_API_KEY_2 }}
+          APIFY_API_KEY_3: ${{ secrets.APIFY_API_KEY_3 }}
+          APIFY_API_KEY_4: ${{ secrets.APIFY_API_KEY_4 }}
+          APIFY_API_KEY_5: ${{ secrets.APIFY_API_KEY_5 }}
+          APIFY_API_KEY_6: ${{ secrets.APIFY_API_KEY_6 }}
+          APIFY_API_KEY_7: ${{ secrets.APIFY_API_KEY_7 }}
+          APIFY_API_KEY_8: ${{ secrets.APIFY_API_KEY_8 }}
+          APIFY_API_KEY_9: ${{ secrets.APIFY_API_KEY_9 }}
+          APIFY_API_KEY_10: ${{ secrets.APIFY_API_KEY_10 }}
+          APIFY_API_KEY_11: ${{ secrets.APIFY_API_KEY_11 }}
+        run: node test_scraper.js

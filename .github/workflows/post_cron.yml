@@ -1,0 +1,109 @@
+name: X Auto-Poster v3 — Original AI News Pipeline
+
+on:
+  schedule:
+    # 9x/day — optimized for peak hours across US, UK, Australia, New Zealand
+    # UTC times → local times:
+    #  0 UTC = US 7pm, AUS 10am, NZ 12pm
+    #  3 UTC = US 10pm, AUS 1pm, NZ 3pm
+    #  6 UTC = UK 6am, AUS 4pm, NZ 6pm
+    #  9 UTC = UK 9am, US 4am, AUS 7pm
+    # 11 UTC = UK 11am, US 6am, AUS 9pm
+    # 14 UTC = UK 2pm, US 9am, NZ 2am
+    # 17 UTC = UK 5pm, US 12pm, AUS 3am
+    # 20 UTC = UK 8pm, US 3pm, AUS 6am
+    # 22 UTC = UK 10pm, US 5pm, AUS 8am, NZ 10am
+    - cron: '0 0,3,6,9,11,14,17,20,22 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-v3-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run v3 Original AI News Pipeline
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          APIFY_API_KEY: ${{ secrets.APIFY_API_KEY }}
+          APIFY_API_KEY_2: ${{ secrets.APIFY_API_KEY_2 }}
+          APIFY_API_KEY_3: ${{ secrets.APIFY_API_KEY_3 }}
+          APIFY_API_KEY_4: ${{ secrets.APIFY_API_KEY_4 }}
+          APIFY_API_KEY_5: ${{ secrets.APIFY_API_KEY_5 }}
+          APIFY_API_KEY_6: ${{ secrets.APIFY_API_KEY_6 }}
+          APIFY_API_KEY_7: ${{ secrets.APIFY_API_KEY_7 }}
+          APIFY_API_KEY_8: ${{ secrets.APIFY_API_KEY_8 }}
+          APIFY_API_KEY_9: ${{ secrets.APIFY_API_KEY_9 }}
+          APIFY_API_KEY_10: ${{ secrets.APIFY_API_KEY_10 }}
+          APIFY_API_KEY_11: ${{ secrets.APIFY_API_KEY_11 }}
+          APIFY_API_KEY_12: ${{ secrets.APIFY_API_KEY_12 }}
+          APIFY_API_KEY_13: ${{ secrets.APIFY_API_KEY_13 }}
+          APIFY_API_KEY_14: ${{ secrets.APIFY_API_KEY_14 }}
+          APIFY_API_KEY_15: ${{ secrets.APIFY_API_KEY_15 }}
+          APIFY_API_KEY_16: ${{ secrets.APIFY_API_KEY_16 }}
+          APIFY_API_KEY_17: ${{ secrets.APIFY_API_KEY_17 }}
+          APIFY_API_KEY_18: ${{ secrets.APIFY_API_KEY_18 }}
+          APIFY_API_KEY_19: ${{ secrets.APIFY_API_KEY_19 }}
+          APIFY_API_KEY_20: ${{ secrets.APIFY_API_KEY_20 }}
+          APIFY_API_KEY_21: ${{ secrets.APIFY_API_KEY_21 }}
+          APIFY_API_KEY_22: ${{ secrets.APIFY_API_KEY_22 }}
+          APIFY_API_KEY_23: ${{ secrets.APIFY_API_KEY_23 }}
+          APIFY_API_KEY_24: ${{ secrets.APIFY_API_KEY_24 }}
+          APIFY_API_KEY_25: ${{ secrets.APIFY_API_KEY_25 }}
+          APIFY_API_KEY_26: ${{ secrets.APIFY_API_KEY_26 }}
+          APIFY_API_KEY_27: ${{ secrets.APIFY_API_KEY_27 }}
+          BRIGHTDATA_API_KEY: ${{ secrets.BRIGHTDATA_API_KEY }}
+          CHOCODATA_API_KEY: ${{ secrets.CHOCODATA_API_KEY }}
+          CHOCODATA_API_KEY_2: ${{ secrets.CHOCODATA_API_KEY_2 }}
+          CHOCODATA_API_KEY_3: ${{ secrets.CHOCODATA_API_KEY_3 }}
+          CHOCODATA_API_KEY_4: ${{ secrets.CHOCODATA_API_KEY_4 }}
+          CHOCODATA_API_KEY_5: ${{ secrets.CHOCODATA_API_KEY_5 }}
+          CHOCODATA_API_KEY_6: ${{ secrets.CHOCODATA_API_KEY_6 }}
+          CHOCODATA_API_KEY_7: ${{ secrets.CHOCODATA_API_KEY_7 }}
+          CHOCODATA_API_KEY_8: ${{ secrets.CHOCODATA_API_KEY_8 }}
+          CHOCODATA_API_KEY_9: ${{ secrets.CHOCODATA_API_KEY_9 }}
+          CHOCODATA_API_KEY_10: ${{ secrets.CHOCODATA_API_KEY_10 }}
+          CHOCODATA_API_KEY_11: ${{ secrets.CHOCODATA_API_KEY_11 }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+        run: node cron/seed_and_post.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v3 pipeline failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}

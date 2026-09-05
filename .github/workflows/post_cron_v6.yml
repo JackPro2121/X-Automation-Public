@@ -1,0 +1,93 @@
+name: X Auto-Poster v6 — X (Twitter) Content Pipeline
+
+on:
+  schedule:
+    # 5x/day — offset from v5, covers high-activity hours
+    # UTC times → Pakistan (PKT):
+    #  2 UTC = 7:00 AM PKT (morning)
+    #  7 UTC = 12:00 PM PKT (noon)
+    # 12 UTC = 5:00 PM PKT (evening)
+    # 16 UTC = 9:00 PM PKT (night)
+    # 21 UTC = 2:00 AM PKT (late night)
+    - cron: '0 2,7,12,16,21 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-v6-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run v6 X Content Pipeline
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          APIFY_API_KEY: ${{ secrets.APIFY_API_KEY }}
+          APIFY_API_KEY_2: ${{ secrets.APIFY_API_KEY_2 }}
+          APIFY_API_KEY_3: ${{ secrets.APIFY_API_KEY_3 }}
+          APIFY_API_KEY_4: ${{ secrets.APIFY_API_KEY_4 }}
+          APIFY_API_KEY_5: ${{ secrets.APIFY_API_KEY_5 }}
+          APIFY_API_KEY_6: ${{ secrets.APIFY_API_KEY_6 }}
+          APIFY_API_KEY_7: ${{ secrets.APIFY_API_KEY_7 }}
+          APIFY_API_KEY_8: ${{ secrets.APIFY_API_KEY_8 }}
+          APIFY_API_KEY_9: ${{ secrets.APIFY_API_KEY_9 }}
+          APIFY_API_KEY_10: ${{ secrets.APIFY_API_KEY_10 }}
+          APIFY_API_KEY_11: ${{ secrets.APIFY_API_KEY_11 }}
+          APIFY_API_KEY_12: ${{ secrets.APIFY_API_KEY_12 }}
+          APIFY_API_KEY_13: ${{ secrets.APIFY_API_KEY_13 }}
+          APIFY_API_KEY_14: ${{ secrets.APIFY_API_KEY_14 }}
+          APIFY_API_KEY_15: ${{ secrets.APIFY_API_KEY_15 }}
+          APIFY_API_KEY_16: ${{ secrets.APIFY_API_KEY_16 }}
+          APIFY_API_KEY_17: ${{ secrets.APIFY_API_KEY_17 }}
+          APIFY_API_KEY_18: ${{ secrets.APIFY_API_KEY_18 }}
+          APIFY_API_KEY_19: ${{ secrets.APIFY_API_KEY_19 }}
+          APIFY_API_KEY_20: ${{ secrets.APIFY_API_KEY_20 }}
+          APIFY_API_KEY_21: ${{ secrets.APIFY_API_KEY_21 }}
+          APIFY_API_KEY_22: ${{ secrets.APIFY_API_KEY_22 }}
+          APIFY_API_KEY_23: ${{ secrets.APIFY_API_KEY_23 }}
+          APIFY_API_KEY_24: ${{ secrets.APIFY_API_KEY_24 }}
+          APIFY_API_KEY_25: ${{ secrets.APIFY_API_KEY_25 }}
+          APIFY_API_KEY_26: ${{ secrets.APIFY_API_KEY_26 }}
+          APIFY_API_KEY_27: ${{ secrets.APIFY_API_KEY_27 }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+        run: node cron/v6/seed_and_post.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v6 pipeline failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
