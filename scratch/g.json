@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Stop wasting time in the CLI trying to debug complex Redis keys. 🛑\n\nI just found an incredible open-source Redis visualizer that makes data exploration effortless. It’s lightweight, intuitive, and finally gives you a real-time view of your cache performance without the overhead. \n\nGame-changer for your dev workflow. Check it out here: [Link] 🚀\n\n#Redis #OpenSource #SoftwareEngineering #DevTools",
+            "thoughtSignature": "EnEKbwERTTIPJFGgtvePotIcGgBSt0FL+GGMYbIBI3MedoY99hlcZZoJDm7xe0CswBxPrhNCl2IWQoKptQjZO5fgDvo7Xdl18nlEyechbn6/0c5LOY03qAQJSwDooFyuyySkAF0qzraBS3ZTurEWfWHZPg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 140,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.1-flash-lite",
+  "responseId": "9uOoap3FDq7oxN8Pzd2igAY"
+}

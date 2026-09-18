@@ -1,0 +1,86 @@
+name: "X Viral Conversation Magnets (v8) — Direct Publish 2x Daily"
+
+on:
+  schedule:
+    # 2x/day at peak US discussion hours:
+    # 18:30 UTC = 2:30 PM EDT (US afternoon builder debate)
+    # 00:30 UTC = 8:30 PM EDT (US Evening tech philosophy & viral debate)
+    - cron: '30 18,0 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # All X posting paths share one queue. This prevents simultaneous publishes.
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish-viral-magnet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # Gate: a regression must never reach the live account. These tests encode
+      # real shipped defects (see AUDIT_2026-09-15.md). If they fail, skip publishing.
+      - name: Run Cron Regression Suite
+        env:
+          X_PREMIUM: 'true'
+        run: npm run test:cron
+
+      - name: Run v8 Viral Magnet Direct Publisher
+        env:
+          X_PREMIUM: 'true'
+          # Official X API v2 Credentials (OAuth 1.0a)
+          X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY || secrets.TWITTER_API_KEY || secrets.CONSUMER_KEY }}
+          X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET || secrets.TWITTER_API_SECRET || secrets.SECRET_KEY }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN || secrets.TWITTER_ACCESS_TOKEN || secrets.ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET || secrets.TWITTER_ACCESS_SECRET || secrets.ACCESS_TOKEN_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN || secrets.TWITTER_BEARER_TOKEN || secrets.BEARER_TOKEN }}
+          # Buffer Direct Publish Fallback
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          # Supabase
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Gemini Keys (Primary Writer)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          # OpenRouter Keys (Secondary Writer)
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          # Groq Keys (Fallback)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          # Slack Alerts
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: node cron/v8/publish_magnet.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v8 Viral Magnet direct publisher failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}

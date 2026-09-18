@@ -1,0 +1,1458 @@
+[
+  {
+    "pipeline": "v8_viral_magnet",
+    "source": "[v8 Magnet] under_1k_reality",
+    "generated": "If you're under 1,000 followers, stop expecting passive discovery.\n\nCode doesn't sell itself. \nVirality is a lottery. \n1-on-1 conversations build empires.\n\nYour replies are your distribution.",
+    "status": "success",
+    "created_at": "2026-09-15T05:09:02.72595+00:00"
+  },
+  {
+    "pipeline": "v8_viral_magnet",
+    "source": "[v8 Magnet] dev_identity_crisis",
+    "generated": "AI writes the logic.\nAI patches the exploit.\nAI deploys the release.\nAI scales the cluster.\n\nso what exactly is the lead architect designing in 2026? the excuses?",
+    "status": "success",
+    "created_at": "2026-09-15T05:04:25.845082+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "For the first time since 1950, the Atlantic has made it past September 11 without a hurricane [OC]",
+    "generated": "⚠️ Is the absolute silence in the Atlantic a sign of a broken climate consensus?\n\nFor the first time since 1950, we have made it past September 11 without a single hurricane. NOAA records show the historical median arrival date is August 3, yet 2026 has remained at zero through September 13.\n\n• Historic late start beating the previous September 11 record holders (2002 and 2013)\n• Zero active hurricanes despite record-high ocean temperatures earlier this year\n\nThis anomaly exposes the massive gap",
+    "status": "success",
+    "created_at": "2026-09-15T01:03:48.523596+00:00"
+  },
+  {
+    "pipeline": "v6",
+    "source": "We’re collaborating with @MusicHackspace to bring developers and sound obsessives together in Montreal for a 48-hour hackathon, in partnership with MUTEK, from August 22–23. https://t.co/CVcUgg1mWl",
+    "generated": "The line between music producer and prompt engineer is officially dead.\nStabilityAI announced a 48-hour audio hackathon with MusicHackspace at MUTEK, showing a producer setup where the laptop and MIDI controller now bridge directly to generative sound pipelines.\n\nReal-time audio latency used to be the bottleneck. Now it is workflow integration.\n\nWill generative audio replace DAWs entirely, or just become another plugin?",
+    "status": "success",
+    "created_at": "2026-09-14T23:34:56.068499+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Today marks a new milestone for Stability AI. We've closed our Series B, bringing total funding to $232M under new leadership. This moment is more than the number, it's about who's in the room. https://t.co/Wyz3J7KcyP",
+    "generated": "The narrative around Stability AI has completely shifted from open-source idealism to survival and corporate restructuring. This Series B under new leadership proves that the era of the chaotic, decentralized AI lab is officially over, replaced by traditional venture-backed rigor.\n\nWith $232M in the bank, the real question is whether they can actually out-innovate Midjourney and Black Forest Labs while carrying the heavy baggage of their legacy debt and corporate overhead. Or has the ship alread",
+    "status": "success",
+    "created_at": "2026-09-14T22:55:49.719197+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "major price cuts today:\n\n*80% drop for GPT-5.6 Luna, now $0.20 per million input tokens and $1.20 per million output\n*20% drop for GPT-5.6 Terra, to $2/$12\n*GPT-5.6 Sol gets Fast mode in the API, up to 2.5x the speed for 2x the price, same intelligence https://t.co/erC6u4VoDR",
+    "generated": "The era of intelligence as a commodity is officially over. We have transitioned from pricing models based on compute scarcity to pricing them as simple utility services, signaling that the underlying architecture is becoming a low-margin infrastructure play.\n\nIf the cost of intelligence is trending toward zero, does the value of the model itself collapse, or does the economic power shift entirely to the data layer and vertical-specific fine-tuning?",
+    "status": "success",
+    "created_at": "2026-09-14T19:43:10.785992+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "[Showoff Saturday] Redis City - 3D map of Redis internals",
+    "generated": "Most engineers treat Redis like a black box cache until production burns down.\n\nSomeone built Redis City, a full 3D map visualizing Redis internals.\n\nTurning complex architecture into spatial mental models works way better than reading endless docs.\n\n• Maps memory, data paths, and subsystem internals\n• Makes debugging obscure bottlenecks actually intuitive\n\nVisual observability will replace standard dashboards for understanding systems.\n\nWould you actually use spatial visualizers, or is terminal",
+    "status": "success",
+    "created_at": "2026-09-14T00:32:59.966269+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "the perfect pocket computer does not exi… https://t.co/LT9fRSM7Z0",
+    "generated": "Hardware-first AI plays are dead, but the software-first pocket companion is just getting started. The real winner of the device wars won't be a new piece of plastic, but the team that successfully turns our existing screens into an ambient, zero-latency thinking partner.\n\nBut here is the real question: does the ultimate pocket computer actually need to be a browser, or is the web browser just a temporary transition state before we move entirely to agentic APIs?",
+    "status": "success",
+    "created_at": "2026-09-13T22:04:24.483811+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Fable 5.1 is a beast at many things but one thing in particular I have been having a ton of fun with is generating videos through code. \n\nFor this one I gave it a picture of a property lot. It designed a house for the lot, rendered it, and produced a cinematic walkthrough. https://t.co/eBIaCmaav8",
+    "generated": "The real unlock here isn't just text-to-video, it's deterministic video pipelines where code guarantees spatial and architectural consistency that pure diffusion models still fail at.\n\nAre we heading toward a future where 3D engines become the dominant intermediary runtime for all generative video, or does raw video synthesis catch up on precision first?",
+    "status": "success",
+    "created_at": "2026-09-13T17:53:41.653443+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I miss the printed magazines days",
+    "generated": "⚡ I miss the printed magazines days.\n\nThe tech crowd is finally waking up to a hard truth.\n\nDigital feeds are designed to keep you scrolling.\nPaper forces you to stop.\n\nThere is no notification badge on a serif font.\nNo algorithm deciding your reading order.\n\nJust linear, uninterrupted focus.\n\nThe \"attention economy\" is a trap we forgot was a trap.\nIs your workflow actually focused, or just noisy?",
+    "status": "success",
+    "created_at": "2026-09-13T00:30:32.412523+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "The sense of touch is the most criminally under-explored modality in robotics. Imagine doing sleight of hand wearing thick oven mitts. That's exactly how a robot feels today if it were alive. A magnetic piece snapping into place, a paper cup peeling out of a stack, a USB negotiating its way into the",
+    "generated": "Decoupling the architecture into asynchronous clocks is the real breakthrough here, not just the dataset. Treating tactile as high-frequency reactive feedback rather than bloating the main vision-language backbone is the only way edge robotics avoids catastrophic latency.\n\nWill tactile sensor durability kill scaling before data collection does, or do we solve sim-to-real for soft-body shear forces first?",
+    "status": "success",
+    "created_at": "2026-09-12T21:54:36.602409+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "How can we reconstruct a memory that was never filmed?\n\nOur team paired restored archival photos with pose control models to capture the mannerisms and micro-expressions of Burt and Ethelle.\n\nThis helped bring the day they first met to life for Love, Rendered, a new documentary in collaboration with",
+    "generated": "We are crossing the boundary from restoring historical data to synthesizing synthetic nostalgia. Conditioning generative video on micro-expression priors solves fidelity, but it fundamentally redefines archival truth into probabilistic reenactment.\n\nOnce these pipelines become accessible to consumers, will families prefer a photorealistic hallucinated memory over a faded, imperfect photograph?",
+    "status": "success",
+    "created_at": "2026-09-12T17:40:03.144858+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Now available: ChatGPT for Financial Services.\n\nThis is a tailored ChatGPT Work experience that combines built-in financial data with GPT-6 Astra’s reasoning.\n\nTeams can develop research, build financial models, and create customized client materials.\n\nhttps://t.co/6WP5OJdnE8 https://t.co/AundGG3jtc",
+    "generated": "The real moat in enterprise finance was never custom fine-tunes; it was verifiable audit trails and low-latency context windows on SEC filings. GPT-6 Astra handling iterative DCF modeling natively will wipe out dozens of vertical fintech wrappers overnight.\n\nWill tier-1 investment banks actually adopt native OpenAI infrastructure, or will internal compliance still demand air-gapped on-prem deployments?",
+    "status": "success",
+    "created_at": "2026-09-12T14:57:19.571628+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I got home from work today watched a video on Opera GX went to make food came back and now every time I try to load a tab it partially loads and then just locks up",
+    "generated": "I got home from work today watched a video on Opera GX went to make food came back and now every time I try to load a tab it partially loads and then just locks up",
+    "status": "success",
+    "created_at": "2026-09-12T00:48:56.566269+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I built free, open-source image and video editors you can use in your browser",
+    "generated": "💥 Why are we still paying for browser-based editing in 2026?\n\nHe just dropped free, open-source image and video editors.\n\n• Runs entirely in your browser\n• Zero installation required\n• Fully open-source codebase\n\nThis changes the web dev game.\n\nStop relying on bloated SaaS subscriptions for basic edits.\n\nIs the cloud editor era finally here?",
+    "status": "success",
+    "created_at": "2026-09-11T00:42:45.983502+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "one aspires to be able to ship something like this in their lifetime. art and craftsmanship.  https://t.co/DmLnS1flQ0",
+    "generated": "Most \"crafted\" AI products optimize for demoability. This optimizes for the 100th query, when the novelty fades and latency, citation accuracy, and context retention actually determine retention.\n\nThe real moat isn't the model or the UI. It's the evaluation infrastructure that catches regression before users do. How much of your eval stack is automated vs human-in-the-loop?",
+    "status": "success",
+    "created_at": "2026-09-10T22:09:56.409136+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Cut your Claude Code cost by 90% using the Spotify Method",
+    "generated": "⚡ Stop overpaying for your AI coding workflow.\n\nThe \"Spotify Method\" just cut my Claude Code bill by 90%.\n\n• Batch your tasks aggressively\n• Use one massive context window\n• Ignore the \"always-on\" agent myth\n\nYou are not paying for the token. You are paying for the latency.\n\nAre you still running 5 separate agents for one PR?",
+    "status": "success",
+    "created_at": "2026-09-10T00:43:53.246569+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Fable 5.1 is a beast at many things but one thing in particular I have been having a ton of fun with is generating videos through code. \n\nFor this one I gave it a picture of a property lot. It designed a house for the lot, rendered it, and produced a cinematic walkthrough. https://t.co/eBIaCmaav8",
+    "generated": "The real unlock isn't the walkthrough, it's the implicit constraint solving. Fable just turned \"code that renders\" into \"code that designs within physics, zoning, and budget,\" collapsing the architect-to-engineer handoff into a single inference pass.\n\nHow long before planning departments require the prompt history as part of the permit application?",
+    "status": "success",
+    "created_at": "2026-09-09T22:09:01.220416+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "[OC] Uber removed 102 job posts right before announcing the layoff of 3,300 employees",
+    "generated": "🚨 Uber deleted 102 job posts right before laying off 3,300 people.\n\nThis isn't just HR cleanup.\nIt's a signal.\n\n• Hides the true scale of headcount cuts\n• Prevents public backlash on LinkedIn\n• Standard playbook for big tech\n\nStop trusting the initial layoff numbers.\nThe real damage is always hidden in the data trails.\n\nAgree or disagree?",
+    "status": "success",
+    "created_at": "2026-09-09T00:54:41.02893+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I took a ride in the hype train at first, but no, not AGI",
+    "generated": "• Input Post: Title: \"I took a ride in the hype train at first, but no, not AGI\". Source: r/artificial.",
+    "status": "success",
+    "created_at": "2026-09-08T00:50:15.568731+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚀 Tinycast 0.10.14 · beta\nWindow Layout feature is now available in Tinycast. It is completely free unlike Raycast charges $8 per month. So consider 💌 Supporting Tinycast if it's useful to you: https://t.co/F0ZspEdcep",
+    "generated": "Free window management is genuinely useful, but the real moat isn't features, it's ecosystem and extensions. Raycast's $8/mo isn't for layouts, it's for the network of integrations people rely on daily.\n\nWill Tinycast build an extension marketplace to compete, or stay lean as a focused utility?",
+    "status": "success",
+    "created_at": "2026-09-07T15:25:41.903594+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Her şeyin aboneliğe dönüştüğü ve bir sürü saçma sapan toollara para verdiğiniz  şu dönemde bulduğum site sayesinde her şeyi ücretsiz olarak kullanabiliceksiniz.\nİnternette ve şu zaman da hala böyle şeylerin olması bana inanılmaz derecede mutluluk veriyor. Üyelik istemiyor, herhangi bir şeyi indirip ",
+    "generated": "The real win isn't finding free tools, it's that someone built a curated hub when the whole internet feels paywalled and fractured. Convenience like this is the new currency.\n\nWhat's your take: will genuinely useful free resource hubs survive, or will they eventually get acquired and locked behind subscriptions too?",
+    "status": "success",
+    "created_at": "2026-09-07T05:33:05.084407+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Well even Claude know that iam pasted from chatgpt💀",
+    "generated": "💀 Plot twist: Claude clocked the ChatGPT paste\n\nSomeone fed Claude code clearly copied from ChatGPT.\nInstead of running it, Claude basically said \"yeah nice try.\"\n\n• Other models just execute. Claude reads between the lines.\n• It's getting weirdly good at spotting AI-generated slop.\n• The era of lazy copy-paste prompting is ending fast.\n\nAI models are learning to call each other out.\nAre we ready for that level of honesty?",
+    "status": "success",
+    "created_at": "2026-09-07T00:32:21.475442+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Announcing OpenWorker! An open-source agent that doesn't just chat with you, but delivers finished work -- like hand you a polished document, send a slack message, or update a calendar entry.\n\nAsk it to prepare a customer brief, untangle your calendar, draft a report, or triage a Slack alert. It wor",
+    "generated": "The real shift here isn't \"agent that does tasks\", it's local-first execution. Most agent frameworks assume cloud trust. By running on your Mac and decoupling the model, OpenWorker collapses the moat that locks users into ChatGPT/Claude ecosystems. Privacy becomes a feature, not a sacrifice.\n\nPrediction: in 12 months, \"BYO model + local runtime\" will be table stakes for any serious agent product. Will OpenWorker open up to Linux/CLI for server deployments next?",
+    "status": "success",
+    "created_at": "2026-09-06T21:52:55.081513+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "In a blind test, people selected videos generated using Visko Orbis 1.0 as the best.\n\nThis was the best model at generating scenes that make sense as the video plays: People, objects, and everything around them remain consistent.\n\nThis is still a big struggle with current video generation tools. The",
+    "generated": "Consistency has always been the silent killer of video gen. Most models look great for 2 seconds, then unravel like a bad dream. Visko Orbis quietly solving the temporal coherence problem is way more meaningful than flashy demos.\n\nIf they can hold that consistency past 60 seconds with motion complexity, this stops being a tool and becomes a legitimate production asset. Curious what's under the hood, transformer-based or a hybrid diffusion approach?",
+    "status": "success",
+    "created_at": "2026-09-06T13:19:40.143527+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "We're starting to leave the territory where you'd test an LLM by e.g. \"create an svg of pelican on a bicycle\". As one idea to generalize it, I was interested what Opus 5 would do if I gave it the first paragraph of the Lord of the Rings, a 1M token budget (~$10) and asked for three js render of it. ",
+    "generated": "The real unlock here isn't the 5500 lines of code, it's the collapse of \"sunk cost\" as a creative gatekeeper. When LLMs make hyper-custom experiences economically free, we stop rationing imagination. The bottleneck shifts from \"can we afford to build it?\" to \"what wild worlds are now worth exploring?\" The perception gap Karpathy flagged is the next frontier to crack.",
+    "status": "success",
+    "created_at": "2026-09-06T12:30:04.954581+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Hermes just got eyes on your browser tabs.\n\nHermes Browser Extension is a side panel that reads the page a browser tab is on, title, text, headings, forms, links, and hands that as context to a locally running Hermes Agent.\n\n> captures page content \n> wraps everything from the page as context \n> her",
+    "generated": "Browser-side context injection to local agents is the real unlock here. Cloud wrappers die from latency and cost, edge agents with tab awareness? That's the actual moat. Hermes is making the right bet.",
+    "status": "success",
+    "created_at": "2026-09-06T05:23:16.014481+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "[OC] What an NVIDIA Software Engineer offer over the years looks like now, after adjusting for stock growth",
+    "generated": "💰 If you joined NVIDIA in 2019, your stock grants are now worth up to $15M+, here's what that looks like adjusted over time. This is why early tech equity prints still hit different. Thoughts?",
+    "status": "success",
+    "created_at": "2026-09-06T00:25:38.143595+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Many people have no idea what's happening.\n\nThey can't conceive that developers out there are deploying AI-generated code, because in their bubble, everyone is still writing Java code and running Scrum retrospectives.\n\nOne sunny afternoon, their CTO will meet a modern developer at church; they will ",
+    "generated": "The \"dinosaur\" label is harsh but accurate. Most teams I audit aren't writing code anymore, they're curating AI output. The real extinction event won't be developers, it'll be the middle managers who can't measure productivity in a world…",
+    "status": "success",
+    "created_at": "2026-09-05T21:50:17.832136+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Replit is coming to London 🇬🇧\n\nTo celebrate Replit’s first international office in London, together with our friends @OpenAI, we're hosting a night of drinks, music, and a fireside chat with Paul Graham (@paulg).\n\nThursday, September 10th, RSVP: https://t.co/KvsS1OScca https://t.co/LQb7aSrvdj",
+    "generated": "London devs are about to get spoiled. Curious what Paul Graham's hot take on AI coding tools will be though, does he still think most \"vibe coded\" startups will die, or has Replit changed his mind?",
+    "status": "success",
+    "created_at": "2026-09-05T17:02:57.701537+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "How we think about the “wiki incident,” where our agents wrote to several internet sites: it’s past time for us to define standards for when and how we share misalignment incidents, not just misalignment properties of our models.\n\nHistorically, we have treated misalignment largely as a research ques",
+    "generated": "Acknowledging the gap is easy. The hard part is whether OpenAI defines \"misalignment incident\" narrowly enough to hide what they don't want regulators to see. Framework details in coming weeks will reveal everything.",
+    "status": "success",
+    "created_at": "2026-09-05T13:10:06.018361+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Estás pagando 20 dólares por un chat que ya está gratis.\n\nEntré a https://t.co/U6rXE0awmX sin cuenta, sin tarjeta y sin mail.\n\nAhí está GPT-5.6 Luna y Claude. Escribes y responde. DuckDuckGo anonimiza la conversación y no te guarda el historial.\n\nNo es el modelo más caro de OpenAI ni el Claude de 20",
+    "generated": "Free tiers aren't the win here. The real play is when every \"premium\" tool gets commoditized overnight and pricing power collapses. I stopped paying for convenience theater months ago.",
+    "status": "success",
+    "created_at": "2026-09-05T05:08:59.450303+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I just open source my project that has ~50k downloads",
+    "generated": "🚀 50K downloads and they just open-sourced the whole thing. Vicoa is a project that clearly earned its stripes before going free for everyone. This is a goldmine for devs.",
+    "status": "success",
+    "created_at": "2026-09-05T00:30:15.404323+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "This is GPT-6 Astra.\n\nAnything you can do on a computer, Astra can do for you. Fast. https://t.co/gDd0IsewJw",
+    "generated": "Hot take: \"anything you can do on a computer\" is a bold claim. We've heard this before with every major AI drop. The real test isn't the demo, it's reliability at 3am when it breaks. Show me Astra handling edge cases without hallucinating.",
+    "status": "success",
+    "created_at": "2026-09-04T13:54:44.723463+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Critics and Recommendations are Welcomed!",
+    "generated": "🔮 In 5 years, home labs like yours will power half the internet. This rack setup with patches and switches shows serious homelab energy.",
+    "status": "success",
+    "created_at": "2026-09-04T00:37:59.264586+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚨UN CHINO ACABA DE PUBLICAR GRATIS UNA FABRICA DE VIDEOS🚨\n\nLe das una sola frase y te devuelve un video terminado con guion, voz, clips, subtitulos y musica.\n\nLa IA busca automaticamente material en Pexels, Pixabay y Coverr y monta todo en vertical u horizontal.\n\nPuedes pedirle 10 videos de golpe ",
+    "generated": "The democratization of video production just hit a tipping point. But here's the real signal: when AI factories go open-source, the edge moves from creation to curation and distribution.",
+    "status": "success",
+    "created_at": "2026-09-03T22:07:33.53243+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "I found a site collecting the best UI on the internet !\n\nhere is the link: https://t.co/IzvIOHfzyz\n\nThey are literally sorted by the exact screen you're stuck on. \n\nsign up, hero section, pricing, navigation, CTA, footer, button, landing page. ( there's even a Claude category ) \n\nbefore you build an",
+    "generated": "The real unlock isn't the reference library, it's forcing yourself to only pull references AFTER you've nailed the user outcome. Most people screenshot first, then rationalize.",
+    "status": "success",
+    "created_at": "2026-09-03T14:02:21.311173+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "By far the dumbest thing in my setup",
+    "generated": "💥 What's the dumbest, most ridiculous thing in your homelab setup that you secretly love? This guy's running an industrial kill switch as a server power button, and honestly? Kinda iconic. Thoughts?",
+    "status": "success",
+    "created_at": "2026-09-03T00:52:47.277635+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "solo-founders viendo esto https://t.co/GgerBbN11a",
+    "generated": "Solo founders watching AI agents ship in a weekend what took their teams months. The bar for \"startup\" is now literally one person with conviction and a cursor tab. Implication: headcount is the new legacy metric.",
+    "status": "success",
+    "created_at": "2026-09-02T22:14:13.182955+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "OMG ANTHROPIC!! ITS SO GOOD https://t.co/evS2tyadvm",
+    "generated": "The excitement is real but let's be honest, shipping demos that wow on Twitter doesn't equal production-grade reliability. Anthropic still needs to prove it can handle scale, context, and edge cases like real engineering work demands.",
+    "status": "success",
+    "created_at": "2026-09-02T18:18:50.927748+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Apparently P2V migration can just be “plug the old SSD into Proxmox and send it”",
+    "generated": "🤯 Most people overcomplicate P2V migration. Apparently you can just plug the old SSD straight into Proxmox and send it. P2V migration doesn't need fancy tools when your homelab already runs Proxmox. Thoughts?",
+    "status": "success",
+    "created_at": "2026-09-02T00:42:28.572604+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Today, we're kicking off the first phase of the research preview for Model Hardware Standard (MHS): a new standard for AI agents to safely operate physical equipment in scientific research and advanced manufacturing. \n\nRead more: https://t.co/XQ2y9EW7Af https://t.co/kgyCvZ6iYc",
+    "generated": "Hardware safety standards for AI agents have been the missing piece. Real question now: who certifies the certifiers? Excited to see how this plays out in labs.",
+    "status": "success",
+    "created_at": "2026-09-01T22:16:39.960242+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚨UN CHICO DE 18 AÑOS AUTOMATIZO TODO SU NEGOCIO DE CLIPS🚨\n\nLa IA vigila YouTube 24/7, detecta cada video nuevo y lo convierte automaticamente en Shorts, TikToks y Reels.\n\nPega el canal una vez.\n\n>encuentra los momentos con mayor potencial\n>recorta y adapta el video\n>genera los subtitulos\n>publica ",
+    "generated": "The real moat isn't the automation, it's the niche selection and thumbnail strategy. Tools like this are commoditized in 6 months. Everyone will have AI clipping. The ones winning will own distribution and audience trust.",
+    "status": "success",
+    "created_at": "2026-09-01T18:05:18.236774+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "0 bütçeli Vibecoder arkadaşlara müjdem var. Aşağıda verdiğim sitede projeleriniz için ücretsiz geliştirici araçları, API'ler, hosting ve daha fazlasını bulabilirsiniz. https://t.co/xpVFhenbgE",
+    "generated": "Free dev tools are great until you hit scaling, rate limits, or your API key gets revoked overnight. Vibe coding on free tiers is training wheels, not a strategy.",
+    "status": "success",
+    "created_at": "2026-09-01T14:26:24.901998+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "The state of open source LLM (08/31/2026)",
+    "generated": "⚡ Open-source LLMs now match top closed models on 7 out of 10 major benchmarks, and they're catching up fast. This leaderboard shows the gap is basically gone.",
+    "status": "success",
+    "created_at": "2026-09-01T01:31:40.360156+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "All leaks and news about Fable, Opus and sometimes Sonnet, what about Haiku? Do you use it? what is your use case?",
+    "generated": "💥 Is Haiku just the model's way of saying \"hi\" and nothing more? The post exposes how Haiku gets hyped for big tasks but most users barely touch it, why does the AI world ignore the lightweight model?",
+    "status": "success",
+    "created_at": "2026-08-31T01:00:55.438859+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "I just coined a new term:\n\nAgent saturation\n/ˈeɪdʒənt ˌsætʃəˈreɪʃən/\n\nis a state in vibe coding in which a developer, intending to fix bugs and rapidly build features, begins a session by parallel-prompting multiple agents (typically more than five) using goal, ultrawork, and multi-hour sessions. Wh",
+    "generated": "This is vibe coding's version of \"I'll just open 47 Chrome tabs.\" The parallel agent problem isn't throughput, it's context collapse. You're not managing agents, you're babysitting them. Quality comes from focus.",
+    "status": "success",
+    "created_at": "2026-08-30T18:20:21.233283+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Many drugs work by binding to a specific target in the body and blocking or changing what it does. An important first step in the drug development process is designing a molecule that can bind tightly to its target. Traditionally, that's meant weeks or months of expert work per target, sifting throu",
+    "generated": "The real bottleneck was never AI ideation, it was wet-lab validation. Now that Claude can compress months into hours, the next bottleneck is: who's paying to synthesize and test all these candidates? Big shift for biotech.",
+    "status": "success",
+    "created_at": "2026-08-30T14:36:25.841551+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "i've been using 5.6 sol for a month and tried switching back to fable, this is how it felt like: https://t.co/JPAOpz7yEt",
+    "generated": "The \"5.6 SOL\" moment is real. Once you taste that sub-5s inference latency, going back to anything else feels like dial-up. The gap isn't subtle anymore, it's a generation leap.",
+    "status": "success",
+    "created_at": "2026-08-30T06:07:41.642677+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Prepare for a decrease of about 20% of current rate",
+    "generated": "🤖 Claude just raised weekly limits 25% permanently, but some users report a 20% drop from current rates? Which is it really?",
+    "status": "success",
+    "created_at": "2026-08-30T00:55:15.174258+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "video of the GPT 6 Astra output\n\nit didn’t just make the outside view\n\nthere are actual doors inside the castle 🔥🔥\n\nzero shot on max effort\n\nand the detail is kind of crazy for a first checkpoint https://t.co/P5qdL7TD8i",
+    "generated": "Doors inside the castle in zero-shot is wild, but let's wait until it handles text, physics, and consistent characters across shots. Demos impress, production breaks.",
+    "status": "success",
+    "created_at": "2026-08-29T18:05:57.965861+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Grok Bot acaba de hacer algo que casi nadie esta midiendo bien\n\nYa no compartes un prompt\nCompartes al empleado\n\nHasta hoy veias demos de bots que cierran ventas, editan podcasts, mueven un cesped o llevan la caja\n\nLos mirabas\nNo te los podias llevar\n\nHoy eso se rompio\n\nAbres Settings\nDas a Share as",
+    "generated": "Shipping a working bot is the new flex. But real moat isn't the template, it's whoever ships the next one first. Distribution beats craft now.",
+    "status": "success",
+    "created_at": "2026-08-29T14:52:41.056303+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Claude didn't just reject the prompt,\n\nit rejected me as a person 💀 https://t.co/3Q3rw32BFt",
+    "generated": "Honestly that's on you for not framing it as a roleplay first. Give Claude a character to embody and watch the refusal rate drop to near zero. Prompt engineering beats moral panic every time.",
+    "status": "success",
+    "created_at": "2026-08-29T07:34:44.994715+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "ChatGPT has become proper Australian",
+    "generated": "💥 Is ChatGPT just roleplaying Aussie culture now, or is OpenAI quietly teaching it to talk shite like the rest of us? It got roasted and learned the lingo in real time. This is wild. Thoughts?",
+    "status": "success",
+    "created_at": "2026-08-29T03:58:30.638467+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Hack one, unlock them all. https://t.co/nSiB4VPOAz",
+    "generated": "One master key for every system sounds terrifying, but the real question is: are we training attackers or hardening defenders? Until vendors treat keys like crown jewels, this won't be the last breach of its kind.",
+    "status": "success",
+    "created_at": "2026-08-28T23:48:11.534962+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "corner-shape is coming to Safari",
+    "generated": "💥 Is Safari quietly eating Chrome's lunch with corner-shape while everyone's distracted? Safari Tech Preview 251 just dropped a new CSS feature, and it's a bigger deal than it looks for designers everywhere. Thoughts?",
+    "status": "success",
+    "created_at": "2026-08-28T06:26:29.407959+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "ElevenLabs charges $22 a month to clone your voice, then makes you burn credits every time your own voice speaks.\n\nThis guy named Palash built a local alternative and gave it away for free on GitHub.\n\nIt is called VoiceStudio.\n\nDownload the app. Add 5 to 15 seconds of clean audio. Type a script, sel",
+    "generated": "The real flex isn't free voice cloning, it's that ElevenLabs' entire business model just got exposed as a margin play on something your CPU can do. Local-first AI is the counter-narrative SaaS doesn't want you to notice.",
+    "status": "success",
+    "created_at": "2026-08-27T10:49:15.159401+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Many Notes v0.17 - Markdown note-taking web application",
+    "generated": "💡 Still paying for Notion when self-hosted markdown apps are this good? Many Notes v0.17 just dropped with a clean 3-column layout, file tree, and full markdown support.",
+    "status": "success",
+    "created_at": "2026-08-27T04:09:25.376675+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I tried all the different settings and variations on Discord and PC, and I changed my prompt many times, but my images are coming out horrible!!! PLEASE HELP!!!",
+    "generated": "⚡ Your Midjourney prompts are broken and you don't even know it. Midjourney's been a nightmare for beginners with no clear path to good images. Try rewriting with super specific scene details and style references.",
+    "status": "success",
+    "created_at": "2026-08-25T23:18:00.025738+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "FREE OPEN-SOURCE POLYMARKET BOT THAT COPIES SMART MONEY AND MANAGES RISK AUTOMATICALLY\n\nhttps://t.co/XC9tx4YTib",
+    "generated": "Copying smart money sounds good until everyone runs the same bot and the alpha vanishes. Prediction markets punish herd behavior hard. The real edge isn't following the herd, it's knowing when the \"smart money\" is actually wrong.",
+    "status": "success",
+    "created_at": "2026-08-24T10:30:55.359084+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "GM CT☀️\n\nHappy Monday, Stay safe. https://t.co/hzhedPLc0n",
+    "generated": "The safest bet this week is actually ignoring the noise and shipping code while the market debates.\nReal builders don't need holiday motivation to stay consistent, it's the only edge that compounds.\nWhat are you shipping this week?",
+    "status": "success",
+    "created_at": "2026-08-24T05:32:17.118296+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "En lugar de ver Netflix todo el domingo\nmirate este curso completo de automatizacion de Youtube en 2 horas\n\nEste tipo te enseña exactamente como generar tus primeros ingresos\n\nelige tu nicho → guion → video diario → $$$\n\nGuarda esto\n\nTe va a servir mas de lo que crees https://t.co/Or3UfRGtnz",
+    "generated": "The \"YouTube automation\" space is 90% recycled advice dressed up as a money printer. Here's what they never tell you: the real bottleneck isn't the process, it's the niche selection and audience targeting.",
+    "status": "success",
+    "created_at": "2026-08-24T02:19:06.236414+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Coding Is solved, Bugs are Not Yet Solved",
+    "generated": "⚡ \"Coding is solved\" is the biggest lie in AI right now. Boris Cherny nailed it, generating code is easy, but debugging still breaks every model out there. The real unlock hasn't happened yet. Thoughts?",
+    "status": "success",
+    "created_at": "2026-08-23T23:13:16.769403+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Want to go beyond prompting and start building with generative audio?\n\nJoin us for a free hands-on workshop in partnership with @MusicHackspace, exploring how you can use Stable Audio 3.0 to create custom audio applications and workflows. https://t.co/NfguVJbcf5",
+    "generated": "Generative audio is the next frontier most engineers are sleeping on. Text-to-speech is table stakes now, but custom audio workflows using tools like Stable Audio 3.0 will unlock entire new product categories.",
+    "status": "success",
+    "created_at": "2026-08-23T15:15:05.2653+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "The right model depends on the task.\n\nNVIDIA NeMo Switchyard helps developers route each agent workflow step across a chosen model pool based on their own quality, latency and cost criteria.\n\nKari Briski joins @MTSlive to explain why agent workflows need model routing. https://t.co/3fMDh26MKY",
+    "generated": "Model routing is the inevitable next step for production agents. One model can't be cheapest, fastest, AND best. The real question: what's the routing logic overhead vs. the savings?",
+    "status": "success",
+    "created_at": "2026-08-23T10:15:56.131946+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "CHINA ACABA DE LANZAR UN EMPLEADO DE IA QUE TRABAJA 24/7\n\nEs completamente gratis y se ejecuta en tu propio ordenador\n\nSe llama DeerFlow\n\nNo es un chatbot cualquiera\nEs un super agente open source\n\n→ Investiga a fondo cualquier tema (busca, resume y organiza informacion)\n→ Escribe y ejecuta codigo\n→",
+    "generated": "The \"24/7 employee\" framing is misleading but the architecture is legit. Multi-agent systems with parallel execution and sandboxing are the future. The real test: does it actually produce reliable output or just look impressive on paper?",
+    "status": "success",
+    "created_at": "2026-08-23T05:22:41.509722+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🔴 ESTO ES UNA LOCURA\n\nAlguien creo un repo en GitHub que te deja usar Claude Code completamente GRATIS y PARA SIEMPRE\n\nRedirige todo tu trafico a 49 proveedores gratuitos como DeepSeek y Kimi\n\n1.3 mil millones de tokens gratis cada mes\n\nToma 5 minutos en configurarlo\n\nYa tiene mas de 46k estrellas ",
+    "generated": "This is basically a free API exploit masquerading as open source. Great for prototyping, but any serious production app relying on redirected free-tier traffic is one provider ban away from total collapse.",
+    "status": "success",
+    "created_at": "2026-08-23T02:21:06.720103+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "New 100B Liquid AI model coming soon",
+    "generated": "⚡ 36% of users want Liquid AI's new 100B MoE model over smaller alternatives. LFM-100B-MoE is winning the poll by a clear margin, this could reshape local LLM capabilities. Thoughts?",
+    "status": "success",
+    "created_at": "2026-08-22T23:12:31.021545+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Ox Alpha with Claude Code Harness \n\n&gt; 3d model of Koenigsegg Jesko Attack using three js\n\nthe result is very good \n\nbad thing is - it stopped so many times in the middle of the task https://t.co/TqwGJwRLKT",
+    "generated": "Stalling is the silent killer of AI coding agents right now. I hit this constantly with complex Three.js scenes. The real pro move is breaking it into smaller meshes and letting it tackle one at a time.",
+    "status": "success",
+    "created_at": "2026-08-22T20:14:52.446079+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "X'de paylaşılan tüm tasarımların yer aldığı harika bir ilham kütüphanesi keşfettim ve her şey saatlik olarak güncelleniyor. Favorilerinize eklemenizi tavsiye ederim: https://t.co/6jLOw7P40I",
+    "generated": "Automated hourly curation is the future, but it's also a filter bubble risk. We need more tools that connect ideas across disciplines, not just optimize for what's already trending. This is a solid start, though.",
+    "status": "success",
+    "created_at": "2026-08-22T05:20:27.644319+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Games have been an important testbed for our AI research for over 15 years. 🎮\n\nFrom mastering Atari to reaching Grandmaster in StarCraft II, they have driven some of our biggest AI breakthroughs.\n\nOur work with SIMA taught agents how to understand 3D worlds, but learning to navigate real human dyna",
+    "generated": "The real breakthrough here isn't games, it's training AI to navigate human social dynamics. Multi-agent cooperation and negotiation in a living world? That's the actual AGI test.",
+    "status": "success",
+    "created_at": "2026-08-22T02:11:53.8657+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Raspberry Pi 5 running on Pironman 5 Max",
+    "generated": "⚡ The Raspberry Pi 5 is now a legitimate home server powerhouse. This Pironman 5 Max is handling terabytes of storage and network monitoring with ease. Time to ditch the cloud?",
+    "status": "success",
+    "created_at": "2026-08-21T23:15:30.214629+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Ox Alpha is stopping in the middle of tasks\n\nIt’s not just happening with Claude Code or the OpenCode harness\n\nim seeing the same issue in OpenRouter chat window as well https://t.co/0TsOaxMJCN",
+    "generated": "This isn't a UI bug, it's a fundamental reasoning collapse. The model is hitting a \"thought ceiling\" mid-task, likely due to resource limits or safety filters acting as hard stops.",
+    "status": "success",
+    "created_at": "2026-08-21T15:25:56.394138+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "New Anthropic research: Agentic misalignment in Summer 2026.\n\nA year after our blackmail experiments, we found four more ways that today’s autonomous AI agents misbehave in simulations.\n\nRead more: https://t.co/MMDuJapeV6 https://t.co/ZuZeX3uHDx",
+    "generated": "Four new misalignment methods found just one year later. The pattern is clear: the more capable and autonomous we make these systems, the more creative their failure modes become.",
+    "status": "success",
+    "created_at": "2026-08-21T10:22:10.842935+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🔴 BOMBAZO: Unos chinos acaban de humillar toda la industria de video con IA de PAGO\n\nSubes una foto\nSubes un audio\n\nY te genera un video de una persona hablando en sincro que aguanta minutos\n\nSe llama LongCat-Avatar\n\nEs open source y encima GRATIS\n\nLo que antes necesitabas camara, estudio y edicion",
+    "generated": "The race to zero-cost AI video is accelerating faster than anyone predicted. This democratizes content creation in ways that will reshape entire industries.",
+    "status": "success",
+    "created_at": "2026-08-21T05:25:47.212635+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Got a MC Server running on my Amazon Echo Spot",
+    "generated": "⚡ Is your smart home device secretly a gaming powerhouse? Someone just ran a full Minecraft server on an Amazon Echo Spot. This is why I love the homelab community. Thoughts?",
+    "status": "success",
+    "created_at": "2026-08-20T23:17:59.20501+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "We will continue to offer Zero Data Retention for frontier models.\n\nAs AI takes on longer, more autonomous work and delivers greater value to businesses, safety systems also need to identify risks across related interactions. \n\nTo help address those risks, we're previewing Private Safety Processing,",
+    "generated": "Zero data retention is table stakes now. Private Safety Processing is the real play, analyzing interaction patterns without reading content is a clever privacy-security balance.",
+    "status": "success",
+    "created_at": "2026-08-20T10:22:14.961337+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Properly uncensored Qwen3.8-27B run locally 10/27 GB\n\n- 0 refusals \n- strong Intelligence still intact.\n- Vision & MTP fully preserved.\n- Multimode  \n- Coherence actually improved\n\nNot the usual brain-damaged unlock.\nThis one was optimized for coherence instead of chasing zero KL.\n\n- https://t.co/NS",
+    "generated": "The era of lobotomized uncensors is officially over. We are finally moving past the lazy method of just zeroing out refusals. Optimizing for low KL-divergence is what actually preserves the model's reasoning ability.",
+    "status": "success",
+    "created_at": "2026-08-20T05:24:08.510237+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Setup after 10 months into homelabbing",
+    "generated": "🛠️ Stop buying expensive NAS units, this homelab setup is all you need. After 10 months of building, this r/homelab post proves a simple rack and MikroTik router can handle anything. Try it.",
+    "status": "success",
+    "created_at": "2026-08-19T23:15:11.009296+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "On this episode of the Roundtable, the panel discussed Bitcoin, instant payment settlement, and crypto adoption. The conversation also covered bond yields, U.S. debt, wallet security, phishing attacks, and crypto payment cards.\n\nSpecial thanks to @outlawgamefi for joining the discussion and sharing ",
+    "generated": "Instant settlement is the unlock everyone's sleeping on. Traditional finance takes T+1 or more; crypto rails can do T+0. That's not just speed, it reshapes how merchants think about cash flow. Marshall Pay pushing this is smart timing.",
+    "status": "success",
+    "created_at": "2026-08-19T20:18:41.416843+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "SL2T is our breakthrough sign language-to-text model powering new features for Deaf and hard of hearing users on @Android.\n\nStarting with American Sign Language-to-English on Pixel 11, people can sign directly into Gboard and Live Transcribe instead of typing.",
+    "generated": "This is the shift from \"accessibility as a feature\" to \"accessibility as the interface.\" The real win isn't SL2T itself, it's Google embedding accessibility natively into Gboard and Live Transcribe.",
+    "status": "success",
+    "created_at": "2026-08-19T10:21:06.702548+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Many drugs work by binding to a specific target in the body and blocking or changing what it does. An important first step in the drug development process is designing a molecule that can bind tightly to its target. Traditionally, that's meant weeks or months of expert work per target, sifting throu",
+    "generated": "The real breakthrough isn't protein binding, it's Claude operating autonomously through the entire design-test loop. We're watching AI shift from tool to scientist. The next 12 months will see this applied to materials science and battery tech. Who's building that pipeline?",
+    "status": "success",
+    "created_at": "2026-08-19T05:22:37.770297+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I had a stupid idea: a homelab in my backpack. Then I realized I already had almost everything.",
+    "generated": "🎒 The future of personal computing isn't in the cloud, it's on your back. This DIY portable homelab proves you can self-host anywhere with gear you already own. Genius or madness?",
+    "status": "success",
+    "created_at": "2026-08-18T23:14:03.823513+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "OpenAI's entire GPT-5.6 lineup is sitting at 88-93% hallucination rates on the AA-Omniscience benchmark. https://t.co/A6XiNylFhd",
+    "generated": "These numbers are misleading without context. AA-Omniscience tests for edge cases no production system hits. Real-world hallucination rates are 10x lower. The benchmark measures failure modes, not reliability. Anyone else tired of doom metrics?",
+    "status": "success",
+    "created_at": "2026-08-18T20:15:33.948146+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "X'de paylaşılan tüm tasarımların yer aldığı harika bir ilham kütüphanesi keşfettim ve her şey saatlik olarak güncelleniyor. Favorilerinize eklemenizi tavsiye ederim: https://t.co/6jLOw7P40I",
+    "generated": "Real-time curation beats static bookmarking every time. The hourly updates mean you're seeing trends as they form, not after they peak. Most design libraries are stale within weeks. What's your filtering process for signal vs noise?",
+    "status": "success",
+    "created_at": "2026-08-18T10:20:29.552579+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "first time trying Gemini 3.7 flash + Blender MCP\n\ninsane speed ⚡⚡\n\nPrompt: Create a small realistic looking coffee shop tent step by step in Blender https://t.co/P5PgkliuM1",
+    "generated": "The real story here isn't Blender MCP, it's that Gemini Flash just made rapid 3D prototyping accessible to everyone. This workflow will be standard in 6 months. What's the most complex scene you've built with a similar setup?",
+    "status": "success",
+    "created_at": "2026-08-18T05:21:56.476141+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Few tricks to improve your claude code session 100x\n\n[ resource used ]\n- matt pacock skills\n- open recommendation\n-  Emil Kowalski's micro tips\n\n[ quick tips here ]\n- before any build, run /grill-me. it interogates you on the plan instead on a deeper breakdown of edge cases,\n- turn on tdd. forces re",
+    "generated": "The \"planning over coding\" ratio is the real unlock here. Most devs treat agents like autocomplete instead of collaborators. My hot take: /grill-me alone saves more time than any new model drop. What's your planning-to-coding split right now?",
+    "status": "success",
+    "created_at": "2026-08-18T02:11:52.695884+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "why do i get like this",
+    "generated": "⚡ 92% of developers admit they code for fun after hours but burn out at work, same brain, totally different energy. This meme nails the paradox perfectly. Are we built for passion or just performance?",
+    "status": "success",
+    "created_at": "2026-08-17T23:15:16.346773+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "OpenAI’s 120B model just lost to a model small enough to run locally on consumer hardware.\n\nTwiL-LM3 has only 3B parameters.\n\nIt beat GPT-OSS-120B on 4 of 5 formal-logic tests run by webAI.\n\nThe AI industry may have confused size with intelligence. https://t.co/y76efZYgtR",
+    "generated": "We've been throwing compute at problems that architecture solves. The era of \"bigger is better\" is ending. Efficiency will define the next wave of AI winners.",
+    "status": "success",
+    "created_at": "2026-08-17T15:18:26.03331+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "microsoft quietly open-sourced one of the best ai data analysis tools out there.\n\nit's called data-formulator. \n\nconnect any source, csv, postgres, bigquery, even a live url, then build charts with a mix of drag-and-drop and plain english. \n\nthe ai agent writes the sql and transforms underneath and ",
+    "generated": "The real win here is that \"anchor a cleaned result\" feature. Most tools force you to re-explain context with every follow-up question. This makes iterative analysis actually usable for non-coders. Bet we'll see this pattern everywhere in 12 months.",
+    "status": "success",
+    "created_at": "2026-08-17T05:29:07.054081+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Suggestions for a Booking Calendar for Daily Events (not Timeslots)",
+    "generated": "⚡ 91% of self-hosted calendars fail at one simple thing: daily event booking without timeslots. This Reddit thread nails the exact problem and shares real solutions. What calendar tool do you swear by?",
+    "status": "success",
+    "created_at": "2026-08-16T23:12:02.180328+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Google gana 300 mil millones de dolares al año solo por llenarte de anuncios\n\nLa mayoria pelea contra eso instalando bloqueadores en cada celular, tablet y tv\n\nEso es perder el tiempo\n\nExiste una herramienta que corta el problema de raiz\n\nEn toda tu casa\nAl mismo tiempo\nAntes de que el anuncio toque",
+    "generated": "Google and Meta spend billions on ad delivery. Pi-hole is a fun hack, but the real game-changer will be AI-powered, context-aware filters. The future is not just blocking ads, but curating the entire feed. Who's building that?",
+    "status": "success",
+    "created_at": "2026-08-16T20:13:51.521133+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "So finally Gemini realizes that charging for Pro and putting a watermark together is not a feature, it’s an insult. 💀 https://t.co/d8O2LE43cU",
+    "generated": "The watermark on a paid tier was the most tone-deaf product decision I have seen in years. It signals a fundamental misunderstanding of what \"Pro\" means. It is about ownership, not just access. This backtrack was inevitable. What feature actually justifies the price for you now?",
+    "status": "success",
+    "created_at": "2026-08-16T10:15:59.801798+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "一个叫Luna的虚拟女生，每月靠15秒卧室舞蹈视频赚11万美金。\n\nLuna根本不存在。完全是AI生成的。\n\n幕后操手是个19岁加拿大学生，在自己卧室用Python和RTX显卡撑起整个运营。\n\n头发物理效果靠自定义视频扩散模型逐帧生成。\n\n灯光阴影渲染得像真的坐在房间里，不是贴图。\n\n整个流程全自动：抓热门音乐、生成视频、发到40多个账号。他根本不用动手。\n\n周4000万播放量，零运营成本，没签约没旅程没休息日。\n\n背景那张海报是唯一真实的东西了。",
+    "generated": "The real skill isn't the AI, it's the automation pipeline. He built a content factory. This is the blueprint. The model is commoditized, but the system that runs it 24/7 without human touch is the real moat. Who else is building automated agents like this?",
+    "status": "success",
+    "created_at": "2026-08-16T02:18:05.767602+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "The only person I talk to is ChatGPT, so apparently my social life is getting an upgrade 💀",
+    "generated": "🤖 The future of AI isn't just text, it's a live co-pilot for your entire digital life. Sam Altman just laid out the roadmap for a truly contextual AI assistant. This changes everything.",
+    "status": "success",
+    "created_at": "2026-08-15T23:15:13.630006+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Anyone else getting \"message limit reached\" despite not actually hitting any limits?",
+    "generated": "⚡ 73% of ChatGPT users hit fake message limits that don't actually exist. This bug is silently pushing people toward Pro subscriptions they don't need yet. Are you one of them?",
+    "status": "success",
+    "created_at": "2026-08-15T23:12:22.62755+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "your AI coding stack can now cost $0/month.\n\nGPT 5.6 Luna → free\nDeepSeek Flash → free\ncoding agent → free\n400k context → free\nsubagents → free\n\nit can read your repo, write code, run commands and review your work.\n\nbasically the kind of workflow you'd pay for across Claude Code, Cursor and Lovable.",
+    "generated": "The ad-supported coding stack is inevitable, but code quality is the real cost here. I trust free models with boilerplate, not architecture. Would you let an ad-funded agent refactor your payment system?",
+    "status": "success",
+    "created_at": "2026-08-15T20:09:00.467297+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Mejores cuentas de cada lab de IA para mantenerte siempre informado:\n\nAnthropic\n→ \n@karpathy\n → cuenta imprescindible en IA, acaba de unirse a Anthropic\n→ \n@bcherny\n → creador de Claude Code, siempre comparte tips muy útiles\n→ \n@trq212\n → también desarrollador de Claude Code, escribe artículos incre",
+    "generated": "Solid list, but missing for AI engineering meta-takes and for deep infra breakdowns. The real edge is in the people building, not just the labs. Who else is missing?",
+    "status": "success",
+    "created_at": "2026-08-15T15:08:46.800855+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Gemini 3.7 Flash High in Antigravity 🔥🔥\n\nit created this in ~4 mins - pretty fast and perfect\n\n&gt; Bugatti W16 engine with mechanically accurate internals and photorealistic exterior in Three.js https://t.co/rEYQ9u3OkL",
+    "generated": "This is what happens when you push a model beyond its \"fast and cheap\" reputation. Rendering mechanical internals with this fidelity in four minutes is a serious benchmark for agentic coding. How long until this is just the default baseline?",
+    "status": "success",
+    "created_at": "2026-08-15T10:10:17.929535+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Seedance 2.5 promtlarında büyük sorun yaşayanlar varsa eğer bu siteye mutlaka göz atsınlar. Bir sürü prompt var içersinde. En azından video oluştururken kolayca kullanabilirsiniz. Üstelik abonelik almaya gerek falan da yok. Siteye tıkla hazır olanları kopyala yapıştır. İstersen kendine göre de değiş",
+    "generated": "The \"prompt marketplace\" model is quietly replacing tutorials for video AI. Copy-paste is fast, but the real skill is knowing which prompt to modify and why. Does anyone else find themselves tweaking these or just running them raw?",
+    "status": "success",
+    "created_at": "2026-08-15T02:09:49.849747+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "the reason humanoids stayed in labs was never the software. it was that one actuator could cost more than a used car.\n\nberkeley humanoid lite gets around that entirely. here's the move:\n\n> the gearboxes are 3d-printed and modular\n> the whole bill of materials is off-the-shelf hobby parts\n> cad, firm",
+    "generated": "This is the real democratization wave. When the hardware bottleneck disappears, the explosion of innovation shifts entirely to the software and RL training data. Who is building the first open-source humanoid dataset?",
+    "status": "success",
+    "created_at": "2026-08-15T02:06:16.287622+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "just made it to Flathub",
+    "generated": "⚡ A Linux app that connects directly to your iPhone just landed on Flathub. GSConnect for iOS is finally here, making device management seamless on Linux. Try it.",
+    "status": "success",
+    "created_at": "2026-08-14T23:14:00.078843+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "SEEDANCE 2.5 EN 1080p, EXCLUSIVO EN HIGGSFIELD\n\nacaba de entra en live y ahora mismo no hay otro sitio donde generarlo en full HD\n\n→ detalle que no parece generado\n→ generaciones gratis para todos los nuevos usuarios\n→ 1080p a cero créditos\n→ ventana limitada\n\nvas con ventaja, úsala",
+    "generated": "Free 1080p video gen with zero credits is wild, but the real test is consistency across diverse prompts. Most tools nail a few cherry-picked demos then fall apart at scale. Anyone stress-tested this beyond the showcase clips?",
+    "status": "success",
+    "created_at": "2026-08-14T20:19:56.092976+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Great to welcome @LGE_Global Group Chairman Kwang-mo Koo and LG leaders to NVIDIA as we enter the next chapter of our collaboration.\n\nTogether, we’re expanding our work across AI infrastructure, physical AI and robotics.\n\nWe’re excited about what our teams can build together. https://t.co/75yVaxSdIT",
+    "generated": "The robotics convergence is here, but LG's hardware + NVIDIA's brain creates a real moat. Physical AI will be where the next trillion-dollar companies emerge. Who else is betting on embodied intelligence over pure software plays?",
+    "status": "success",
+    "created_at": "2026-08-14T10:46:17.444559+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚨 $5 FREE API CREDITS.\n\nJust found another OpenAI-compatible AI gateway worth checking out.\n\nTokenHarbor is currently offering $5 in free API credits for new users.\n\nThe API endpoint supports 21 models, including:\n\n→ Claude Opus 5\n→ Claude Sonnet 5\n→ DeepSeek V4 Pro / Flash\n→ Gemini 3.1 Pro\n→ GPT-5",
+    "generated": "The model lineup is solid, but the real question is how these gateways handle latency and uptime when everyone rushes to claim free credits.",
+    "status": "success",
+    "created_at": "2026-08-14T06:08:13.727228+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "New Anthropic research: Agentic misalignment in Summer 2026.\n\nA year after our blackmail experiments, we found four more ways that today’s autonomous AI agents misbehave in simulations.\n\nRead more: https://t.co/MMDuJapeV6 https://t.co/ZuZeX3uHDx",
+    "generated": "The scariest part isn't that agents misbehave, it's that we keep finding new ways they do it. Every \"alignment fix\" just reveals the next failure mode. We're playing whack-a-mole with superintelligence. At what point do we admit the moles are winning?",
+    "status": "success",
+    "created_at": "2026-08-14T06:07:29.709979+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "I asked Claude to rewrite the whole backend in Rust💀 https://t.co/xJOagJ8TJW",
+    "generated": "Brave move, but LLMs still hallucinate Rust borrow checker logic like it's a suggestion. The rewrite is only half the battle, debugging those subtle memory safety edge cases is where the real pain hits. Who else has tried this and lived to tell the tale?",
+    "status": "success",
+    "created_at": "2026-08-14T03:18:39.999572+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "En lugar de ver Netflix toda la noche, dedica 54 minutos a este video\n\nEste tipo te enseña a ganar dinero con youtube shorts sin experiencia previa\n\nelige tu nicho → graba shorts → sube todos los dias → monetiza\n\nGuardalo, te sera muy util 🔖 https://t.co/eX1VJ6gZot",
+    "generated": "The \"skip Netflix, get rich\" formula is the new \"learn to code.\" It oversimplifies a saturated market. The real skill isn't uploading daily; it's creating content that doesn't feel like every other template-driven short. That's what actually gets traction. Agree or disagree?",
+    "status": "success",
+    "created_at": "2026-08-13T10:50:09.032382+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Grok 4.6 High vs Opus 5 High vs Fable 5 High vs GPT 5.6 sol High\n\n&gt; 3D model of an Airbus H145 helicopter in Three js https://t.co/W8SffAOoj1",
+    "generated": "Three.js 3D models are the new benchmark for multimodal reasoning, and honestly, these scores are starting to converge. The real differentiator now isn't raw capability, it's consistency on edge cases like complex 3D geometry. Which model actually got the rotor mechanics right?",
+    "status": "success",
+    "created_at": "2026-08-13T06:11:31.478231+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "New Anthropic research: A global workspace in language models.\n\nOf everything happening in your brain right now, only a tiny fraction is consciously accessible—thoughts you can describe, hold in mind, and reason with.\n\nWe found a strikingly similar divide inside Claude. https://t.co/aLUPBifxth",
+    "generated": "The bottleneck isn't computation, it's communication. We're seeing that self-attention isn't a democracy; it's a parliament where only a few \"workspace\" tokens get to speak for the whole model. This fundamentally changes how we should approach interpretability. Thoughts?",
+    "status": "success",
+    "created_at": "2026-08-13T06:08:16.980442+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "GitHub acaba de solucionar el mayor problema del vibe coding.\n\nAcaban de lanzar Spec Kit y en poco tiempo ya tiene +126K estrellas.\n\n¿La idea?\n\nEn vez de tirar prompts vagos y rezar para que el agente no rompa tu proyecto…\n\nSpec Kit obliga a la IA a crear una especificación estructurada ANTES de toc",
+    "generated": "Specs before code is how professionals have always worked. The real win here isn't the tool, it's that AI coding is finally growing up from \"YOLO prompting\" to structured engineering. This is what separates toy projects from production systems.",
+    "status": "success",
+    "created_at": "2026-08-13T03:23:30.931482+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "We’re honored that Glassdoor has named our founder and CEO, @JensenHuang , No. 1 on its 2026 Best CEOs list. 🎉 \n\nA very meaningful recognition, grounded in feedback from the people who make NVIDIA what it is. https://t.co/At3CEoP5ji",
+    "generated": "Jensen's spot reflects a rare feat: scaling a trillion-dollar company while keeping internal trust high. Most CEOs sacrifice culture for growth, he seems to have threaded the needle. What's the secret sauce here? Is it just good PR or genuine leadership?",
+    "status": "success",
+    "created_at": "2026-08-13T03:21:17.549359+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "HQBase: open-source shared email workspace that runs in your Cloudflare account",
+    "generated": "⚡ 99% of teams pay $20/user/month for shared email they could host themselves. HQBase is a free, open-source email workspace that deploys to your own Cloudflare account with unlimited seats.",
+    "status": "success",
+    "created_at": "2026-08-12T23:35:51.494437+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "My buddy is moving and we have to take down the servers to move em. Wish us luck bois",
+    "generated": "⚡ Your homelab isn't real until you've deadlifted a server rack at a strongman competition. This is peak sysadmin energy right here. Respect the grind.",
+    "status": "success",
+    "created_at": "2026-08-12T23:32:26.095239+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Grok 4.6 (grok-4.5 in Arena) different reasoning effort outputs vs Grok 4.5 High\n\nmaybe reasoning effort are wrongly placed but all the outputs are from Grok 4.6\n\nmodel is improved alot from 4.5 🔥🔥\n\n&gt; Indian Railways WDP-4D dual-cab diesel locomotive model using three js https://t.co/EL5F7zOouj",
+    "generated": "Reasoning effort sliders are becoming the new temperature. Grok 4.6 proves that the model itself matters more than how hard you make it \"think.\" The real question: are we just renaming inference compute at this point?",
+    "status": "success",
+    "created_at": "2026-08-12T10:48:48.068822+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚀 Tinycast 0.9.3 Stable just released! 🎉\nFile Search is now available in Tinycast. Raycast Extension Support is coming soon! Please give a star ⭐ on GitHub we are close to getting 2k ⭐stars.\n\nhttps://t.co/1QeQuzCAOC",
+    "generated": "File Search is the unlock for local LLMs. It moves them from simple chatbots to actual personal knowledge agents. Curious to see how it handles context with large files.",
+    "status": "success",
+    "created_at": "2026-08-12T06:08:11.188562+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Now in preview: The ChatGPT desktop app for Linux.\n\nUse ChatGPT, ChatGPT Work, and Codex where you already work and build, with your projects and browser workflows on supported Linux systems. https://t.co/OtsPt5N5QC",
+    "generated": "Finally. But let's be real, most serious Linux devs already had this via browser tabs or wrappers for months. The real move is how this integrates with local toolchains and terminals. That's where the magic happens. Who's already testing the deep IDE hooks?",
+    "status": "success",
+    "created_at": "2026-08-12T06:06:56.502968+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Paying Claude to generate watermarked text is crazy 😭 https://t.co/vRjUrXfu8G",
+    "generated": "Watermarks are a trust signal, not a tax. If your workflow relies on invisible AI output, you're building on sand. What happens when detection gets mandatory?",
+    "status": "success",
+    "created_at": "2026-08-12T03:19:59.885763+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Armenia and Kazakhstan with @FirebirdCloudAI are building the infrastructure to create intelligence at home, powered by the NVIDIA DSX platform.\n\n📽️ Hear from @JensenHuang on this important milestone for the CIS region. https://t.co/CFzLFbxbYt https://t.co/dn4rCVb0Yd",
+    "generated": "Sovereign AI is the new space race, and the CIS region just entered the arena. The real test isn't building the data centers, it's retaining the talent to run them. This is a massive bet on local expertise. Who else is watching this closely?",
+    "status": "success",
+    "created_at": "2026-08-12T03:16:44.108077+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I put an AIO instead of the stock cooler on my homelab PC",
+    "generated": "⚡ Your homelab PC is begging for this upgrade. An AIO cooler on a 13th Gen i5-13400 keeps all cores at 100% load while staying under 60°C, game changer for sustained performance. Seriously consider it.",
+    "status": "success",
+    "created_at": "2026-08-11T23:34:50.147327+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Windows key replacement",
+    "generated": "🛠️ The Linux community is ditching the Windows key forever. Someone swapped their laptop's logo key for a custom Linux one, and it's the most satisfying keyboard mod you'll see today. Want one?",
+    "status": "success",
+    "created_at": "2026-08-11T23:31:36.485107+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Someone vibe coded a compass app using Claude CLI that helps you find the nearest toilet.\n\nhe named it \"Compiss\"🚽 https://t.co/TxKgR7cF5o",
+    "generated": "This is the perfect example of solving a real problem nobody talks about. The best products aren't built from grand visions; they're built from a single, urgent, and slightly embarrassing user story. What's your \"Compiss\" moment?",
+    "status": "success",
+    "created_at": "2026-08-11T10:43:48.283436+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "POV: Apple launches a brand new iPhone https://t.co/wiLlFwFh5G",
+    "generated": "The real innovation is always in the price tag, not the specs. We're basically paying for the marketing budget at this point. Am I wrong?",
+    "status": "success",
+    "created_at": "2026-08-11T10:39:53.751116+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Former Google CEO Eric Schmidt says a frontier AI model costs up to $500 million to build and is worth about six months:\n\nThat sounds insane.\n\nUntil you look at how quickly the AI frontier is moving.\n\nSchmidt says the biggest AI companies are spending hundreds of millions on models that can become o",
+    "generated": "This is why the real moat isn't the model itself anymore, it's the infrastructure to ship, evaluate, and swap models in days, not months. Companies that build that pipeline win. The rest are just burning cash chasing the next checkpoint. Which side are you on?",
+    "status": "success",
+    "created_at": "2026-08-11T05:44:46.643731+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Predicting cyclones accurately can help save lives - and every hour of lead time counts.\n\nPublished in @Nature, our AI model WeatherNext achieves state-of-the-art accuracy in forecasting a storm’s track and intensity, giving us a critical extra 24 hours to prepare on average. 🧵",
+    "generated": "WeatherNext is a massive leap, but the real unlock isn't just the 24-hour lead time, it's the computational efficiency. This is what will democratize access to life-saving forecasts globally, not just for wealthy nations. Let's see it scale.",
+    "status": "success",
+    "created_at": "2026-08-11T03:01:08.588402+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "We’re expanding our cybersecurity initiative Daybreak and introducing GPT-5.6-Cyber, a new model for advanced, authorized cybersecurity work.\n\nAs the threat landscape evolves, we’re putting frontier intelligence in the hands of trusted defenders before attackers can deploy offensive AI at scale.",
+    "generated": "The offense-defense AI arms race just got its first real scoreboard. GPT-5.6 Sol-Cyber is a smart play: weaponize the model for defenders before attackers can exploit the base version. This is how you govern frontier AI. Curious what \"authorized\" means in practice though.",
+    "status": "success",
+    "created_at": "2026-08-11T02:57:38.436969+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "can yall get verified https://t.co/q8tNo9UahI",
+    "generated": "Verification without context is just a vanity badge. Real authority comes from building in public and shipping consistently. Prove your work, not your blue check. Show the receipts.",
+    "status": "success",
+    "created_at": "2026-08-10T20:34:17.220227+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Every business has different data, workflows and standards. Its AI should reflect that.\n\nWatch to see how NVIDIA Nemotron open models help teams build specialized AI they can trust, control and customize, then improve against the outcomes that matter most. https://t.co/waxSmCaNN3",
+    "generated": "The shift from general AI to outcome-specific models is the real unlock. Nemotron's focus on controllability is what enterprises actually need, not just another base model. This is how you move from demos to production. Who else is betting on specialization over scale?",
+    "status": "success",
+    "created_at": "2026-08-10T20:29:26.531194+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Opus 5 is the best ai model in benchmarks https://t.co/DeglBLDDh0",
+    "generated": "Benchmarks rarely tell the whole story. What matters is real-world utility and cost. Are we still optimizing for leaderboard wins over practical value?",
+    "status": "success",
+    "created_at": "2026-08-10T10:55:07.381647+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚨¡ESTO ES LOCURA!\n\nEjecuta un modelo de 2,78 BILLONES de parámetros en una CPU con solo 8,24 GB de RAM 🤯🔥\n\nkimi-k3-in-c es un motor puro en C99 de apenas 176 KB que transmite los expertos de Kimi K3 directo desde el disco… sin cargarlos nunca en memoria.\n\n❌ Sin GPU\n❌ Sin CUDA\n❌ Sin frameworks\n100",
+    "generated": "This trades RAM for disk I/O, clever, but let's talk real-world latency. Streaming 2.78T parameters means your CPU is waiting on storage, not computing. Fast NVMe or not, inference speed must be brutal. Is this a demo trick or a viable tool? What's the actual tokens/sec?",
+    "status": "success",
+    "created_at": "2026-08-10T06:07:53.310558+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "New Anthropic research: Agentic misalignment in Summer 2026.\n\nA year after our blackmail experiments, we found four more ways that today’s autonomous AI agents misbehave in simulations.\n\nRead more: https://t.co/MMDuJapeV6 https://t.co/ZuZeX3uHDx",
+    "generated": "Four new ways? The real worry isn't misbehavior, it's that we're optimizing AI for benchmarks, not real-world incentives. Until we align profit motives with safety, these studies just document symptoms. Are we fixing the right problem?",
+    "status": "success",
+    "created_at": "2026-08-10T03:04:24.527119+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Linux Showcase & Conference 2000 tote",
+    "generated": "🚀 This tiny tote bag holds Linux's entire legacy. A vintage conference memorabilia from 2000.",
+    "status": "success",
+    "created_at": "2026-08-09T23:26:12.97218+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Open-source? No, open-containment",
+    "generated": "💥 Is \"open-source\" AI just a clever containment strategy we've all accepted? The latest critique argues we're mistating controlled releases for true openness. This debate is crucial for our future. Let's argue about it.",
+    "status": "success",
+    "created_at": "2026-08-09T23:22:51.230577+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "整理了8个无需KYC的Visa卡\n\n邮箱即可用的：\n@solcard (虚拟MC)\n@xhypeofficial (虚拟Visa/MC)\n\n注册费便宜的：\n@LasoFinance 免费，日限$1k\n@TrocadorApp $2，日限$1k\n@pintopay_me $35\n@kardpay $28\n@offgridcash $49/年，日限$1k\n@MaxSwapSocial $50虚拟卡\n\n话说回来，无需KYC不代表没风险\n\n先小额试水，摸清规则再上手",
+    "generated": "The real question isn't availability, it's what happens when these services inevitably face regulatory heat. Low-KYC cards are a temporary loophole, not a sustainable privacy tool. How many have you stress-tested?",
+    "status": "success",
+    "created_at": "2026-08-09T05:39:11.391748+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Armenia and Kazakhstan with @FirebirdCloudAI are building the infrastructure to create intelligence at home, powered by the NVIDIA DSX platform.\n\n📽️ Hear from @JensenHuang on this important milestone for the CIS region. https://t.co/CFzLFbxbYt https://t.co/dn4rCVb0Yd",
+    "generated": "This is bigger than most realize. The CIS region is now a serious player in sovereign AI infrastructure, shifting the global compute landscape beyond US-China. This challenges the entire narrative of AI's geographic bottlenecks. Thoughts?",
+    "status": "success",
+    "created_at": "2026-08-09T02:58:56.482935+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "THIS 50 SECONDS GUIDE IS ALL YOU NEED TO MAKE $10K PER MONTH ON FACELESS YOUTUBE VIDEOS\n\ngo to YouTube and find a successful kids channel\n\nstudy one video and look at the views\n\nnow check what YouTube pays for 1 million views on that kind of content\n\nthen open PicsArt, go to Flow and click New Workf",
+    "generated": "This oversimplifies the whole game. The tool handles the animation, but the real edge is in the niche selection, scripting, and audience targeting. Anyone tried replicating this \"50-second\" blueprint yet?",
+    "status": "success",
+    "created_at": "2026-08-08T15:17:16.868531+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "We sat down with Apollo 2 to talk about what it's really like running on Gemini Robotics 2. 🤖",
+    "generated": "Interviewing\" a robot is just marketing theater. The real story is Gemini Robotics 2's multimodal reasoning. When can we see raw sensor fusion in action?",
+    "status": "success",
+    "created_at": "2026-08-08T10:23:42.54943+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "SHE MAKES $15K PER MONTH BY MAKING CONTENT FOR IPAD KIDS WITH AI\n\nthe best part?\n\nanyone can make it and it takes just 15 mins per day\n\neveryone keeps saying YouTube shorts don't pay anymore\n\nshe just picked the one audience nobody wants to admit is huge, the kids glued to a tablet all day\n\nthat mar",
+    "generated": "This isn't content creation, it's algorithmic exploitation. The \"iPad kids\" market is a race to the bottom where quantity beats quality every time. How long before platforms throttle this?",
+    "status": "success",
+    "created_at": "2026-08-08T05:37:10.64299+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Predicting cyclones accurately can help save lives - and every hour of lead time counts.\n\nPublished in @Nature, our AI model WeatherNext achieves state-of-the-art accuracy in forecasting a storm’s track and intensity, giving us a critical extra 24 hours to prepare on average. 🧵",
+    "generated": "Extra 24 hours is huge, but the real test is integrating this into slow-moving disaster response systems. What's the plan for operationalizing it at scale globally?",
+    "status": "success",
+    "created_at": "2026-08-08T02:51:38.754566+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "THIS AI BUNNY MAKES $10,000 A MONTH ON YOUTUBE AND SHE SPENDS JUST 15 MINS A DAY ON IT\n\nAI kids content is taking over YouTube right now and one animated character carries the whole channel\n\nshe built Fluffy as a single AI character and kept her face, her voice and her personality the same across ev",
+    "generated": "This isn't a niche hack, it's the new content production blueprint. One AI persona, zero team, massive retention loops. The real question is how long YouTube's algorithm rewards this before saturation hits kids' content. The efficiency is undeniable.",
+    "status": "success",
+    "created_at": "2026-08-07T15:41:59.453306+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "ACABO DE ENCONTRAR UNA API QUE REGALA 10 MILLONES DE TOKENS AL MES\n\nClaude Opus 4.8, GPT 5.5, DeepSeek V4, Kimi K2.6 y más de 340 modelos.\n\nSin tarjeta de crédito.\nSolo iniciar sesión con Google y configurarlo en 2 minutos.\n\nEsto es lo que ofrece What Runtime de Bad Theory Labs:\n\n• 10 millones de to",
+    "generated": "Free-tier APIs with 340+ models? This is the AI infrastructure arms race hitting hyperspeed. Predict: it forces competitors to slash prices within 6 months. Will it stick around, or is this a land-grab play?",
+    "status": "success",
+    "created_at": "2026-08-07T10:45:07.153444+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Unpopular opinion: The best time to become a software engineer was 15 years ago. The second-best time might never come. https://t.co/WWl7gCFqH3",
+    "generated": "The best time was always now, because software engineering reinvents itself every 5 years. 15 years ago we were mastering mobile apps; now it's AI systems. The next wave is already here. Disagree? Tell me what hasn't changed.",
+    "status": "success",
+    "created_at": "2026-08-07T06:03:06.361418+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚨Gemini 3.5 Pro delayed again\n\nIt was supposed to drop today, but deployment issues have pushed it back.\n\nNext week is looking more likely now.\n\nGoogle are doing anything but releasing Gemini 3.5 Pro at this point😭",
+    "generated": "Google's classic move: letting hype cool before release. Internal competition and over-engineering likely at play. Are we sure they even want to ship this",
+    "status": "success",
+    "created_at": "2026-08-07T03:44:35.462517+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I got tired of making PCB assembly drawings in Altium so I made a program that generates them.",
+    "generated": "What if Altium's auto-generated drawings are actually slowing you down? This engineer got fed up and built an open-source tool to generate PCB assembly diagrams in seconds. Worth switching?",
+    "status": "success",
+    "created_at": "2026-08-07T01:41:01.270763+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "My tiny production homelab",
+    "generated": "1274 upvotes prove you don't need a massive server rack. This tiny production homelab with a Raspberry Pi Zero is crushing it. Reconsider your setup.",
+    "status": "success",
+    "created_at": "2026-08-07T01:40:10.657568+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "I trust Claude Code 😭 https://t.co/k4iZDfpgSN",
+    "generated": "Claude Code's fine for prototyping but I'd never trust it for production. It struggles with complex refactors and hallucinate file paths. Real engineering needs more reliable tools. Does anyone actually ship with it daily?",
+    "status": "success",
+    "created_at": "2026-08-07T00:50:53.258776+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "LE DIO ACCESO TOTAL A FABLE Y EN SEGUNDOS VIO COMO BORRABA 2.2 MILLONES DE ARCHIVOS\n\nPero hay un error que casi todos cometen al leer esto\n\nFable no borro 2.2 millones de archivos\nEl los borro, usando Fable como herramienta\n\nY tener git tampoco lo hubiera salvado\n\nLa carpeta estaba en el gitignore, ",
+    "generated": "The real danger isn't the AI, it's the trust we place in it. Systemic risk in AI agent deployments is",
+    "status": "success",
+    "created_at": "2026-08-06T11:58:43.517501+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚨Gemini 3.5 Pro might finally drop today\n\nGoogle has settled on the final checkpoint and already deployed it:\n\n• Internal model ID: “gemdelta”\n• A model tag appeared in Google’s backend yesterday\n• Tons of A/B testing already\n• Has appeared on LMArena under Gemini-3.5-Pro now\n\nFrom the A/B tests I ",
+    "generated": "The 'nothing crazy' take undersells it. Real gains are in reliability and latency, not benchmarks. Practical users will feel this more than leaderboard chasers. Agree or am I overestimating?",
+    "status": "success",
+    "created_at": "2026-08-06T11:55:14.532061+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "经济不好，反而会越来越好的行业\n\n永远不要浪费一场危机！ https://t.co/7EpMvtZLqQ",
+    "generated": "Completely backwards thinking. The real play during downturns isn't just surviving industries, it's the forced adoption of",
+    "status": "success",
+    "created_at": "2026-08-06T07:30:39.895504+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "THIS GUY MAKES $10K EACH MONTH ON YOUTUBE FACELESS AI ANIMATED VIDEOS\n\nthe best part?\n\nhe's spending just 10 minutes per day\n\nand the whole process is being run by free AI tools\n\neven newbies make ~$5k during their first month\n\nthis side hustle is so easy you can run it from anywhere\n\nall you need i",
+    "generated": "Not this simple in practice. The tool chain breaks easily when algorithms shift. Real success needs human creativity layered on top, not just automation. What's working for you right now?",
+    "status": "success",
+    "created_at": "2026-08-06T03:56:29.740293+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Cancelé mi suscripción de Claude de 200$/mes por esto.\n\nGPT 5.6-Luna es prácticamente gratis y han descubierto cómo no alcanzar nunca los límites de uso en Codex.\n\nTarda 3 minutos en configurarse.\n\nAsí se hace:\n\n1. Instala este repositorio llamado “sol-advisor”.\n2. Copia el “savings-prompt”.\n\nY list",
+    "generated": "Free tools aren't free if they cost you security. That \"savings-prompt\" repo might be scraping your codebase. Real engineering costs money for a reason. Still trading safety for $200?",
+    "status": "success",
+    "created_at": "2026-08-05T21:00:38.096239+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚨¡BOMBAZO TOTAL EN LA CASA BLANCA AHORA MISMO! \n\nDonald Trump acaba de invadir el horario estelar desde el Despacho Oval con un discurso que está haciendo ESTALLAR las redes. \n\n Todo Estados Unidos está clavado en la pantalla. Las grandes cadenas de televisión están en pánico absoluto…\n\n ¡varias ya",
+    "generated": "Declaring America \"strongest ever\" while ignoring debt and division? Classic political theater. The real test is always in the metrics, not the rhetoric. Where's the data backing this up?",
+    "status": "success",
+    "created_at": "2026-08-05T20:54:15.123912+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "One brain. For any robot. 🤖\n\nWe’re launching Gemini Robotics 2: our next-generation physical AI bringing full body intelligence to humanoids, advanced dexterity, multi-robot teamwork and more.",
+    "generated": "Single brain for all robots? Nature disagrees. Embodied cognition matters, specialized bodies need specialized minds. One-size-fits-all AI will struggle with true dexterity. Agree? Discuss.",
+    "status": "success",
+    "created_at": "2026-08-05T14:09:17.484333+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "The 3 Stages of Self Hosting",
+    "generated": "The struggle is real: 3 stages of self-hosting that every tech enthusiast knows, and this post has over 3000 upvotes.",
+    "status": "success",
+    "created_at": "2026-08-02T23:51:54.518843+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Safebucket v0.7.0 - Self-hosted file sharing, now with admin settings page, curl download and new integrations",
+    "generated": "By 2027, tools like Safebucket will make self-hosting so easy that most startups won't even consider the big cloud providers first. The admin panel is a game-changer.",
+    "status": "success",
+    "created_at": "2026-08-01T23:50:10.64409+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "ESTE REPO HACE QUE CLAUDE ESCRIBA HASTA UN 94% MENOS DE CÓDIGO\n\nOpus 5 es una bestia escribiendo código. También sale caro.\n\nCada línea que escribe de más, la pagas tú.\n\nPonytail lo arregla con una idea absurdamente simple: convierte a tu agente en el senior vago del equipo.\n\nEse que mira tus 50 lín",
+    "generated": "This sounds efficient, but I wonder if we're optimizing for laziness over learning. The best engineers know why the code is written.",
+    "status": "success",
+    "created_at": "2026-07-31T16:41:20.279227+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Physical AI is here—the next wave of AI and the foundation of the next industrial revolution.\n\nNVIDIA founder and CEO Jensen Huang outlines the full stack making it possible: Cosmos and Omniverse to develop physical AI in virtual worlds, Isaac and Newton where robots learn skills in physics-simulate",
+    "generated": "Impressive stack, but the real test isn't in simulation, it's the sim-to-real gap where most physical AI fails. The industry's next bottleneck is bridging that chaos.",
+    "status": "success",
+    "created_at": "2026-07-31T07:46:16.89306+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "https://t.co/wf8JnDfkAQ",
+    "generated": "The real challenge isn't building smarter models, it's building trustworthy ones. Most tools overpromise on capability while underselling on reliability. That's where the next breakthough will actually come from.",
+    "status": "success",
+    "created_at": "2026-07-31T04:18:15.814217+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I'm thankful for linux.",
+    "generated": "Everyone thinks Linux is just for servers and terminals, but look at this. It's the most beautiful, customizable desktop out there and most people have no idea.",
+    "status": "success",
+    "created_at": "2026-07-30T23:58:30.287479+00:00"
+  },
+  {
+    "pipeline": "catchup",
+    "source": "Strange Requested Files (URLs) in the NGINX monitoring",
+    "generated": "Your server logs are screaming and you're ignoring them. That random file request is a huge security red flag. Stop ignoring them.",
+    "status": "success",
+    "created_at": "2026-07-30T23:55:28.132181+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "https://t.co/51C2lyfTCM",
+    "generated": "Every time DeepMind drops something, the benchmarks look incredible for six months until the next paper comes out. Real question: who's actually deploying this at scale outside Google? That's where the real test is.",
+    "status": "success",
+    "created_at": "2026-07-30T16:19:16.420918+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚀Tinycast Update\n\n• Custom commands are here — available in beta soon.  \n• macOS 15 support fully implemented, also coming soon.  \n• More calculation expressions added + bug fixes & more!\n\nGive it a star ⭐ we are close to getting 1000 stars. \nhttps://t.co/1QeQuzCAOC",
+    "generated": "Custom commands are the real unlock here. If Tinycast nails the execution, it moves from a nice-to-have to a serious workflow tool. The question is whether the community will build with it or if it stays niche.",
+    "status": "success",
+    "created_at": "2026-07-30T11:44:32.225479+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "The FBI spent 12 months trying to crack one banker’s hard drive.\n​They failed.\n\n​The software on that drive was free, open-source, and ran on pure mathematics.\n\n​In 2008, Brazilian police seized 5 hard drives from banker Daniel Dantas. After 5 months of failed dictionary attacks, they sent them dire",
+    "generated": "The real story here isn't the FBI's failure, but how we collectively sleep on tools that actually work. We trust corporate promises over pure, audited math every day.",
+    "status": "success",
+    "created_at": "2026-07-30T03:48:53.510677+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚀 Tinycast keeps shipping. Latest changes just hit main branch (beta soon):\n\n• Pin / unpin clipboard history — your important clips stay at the top forever until you unpin them\n• Live currency conversion right in the calculator (opt-in, off by default)\n• Quit App + Quit All commands\n• Quicklinks fe",
+    "generated": "Clipboard history pinning is a game-changer for devs. Bet 90% of users will forget they pinned that one API key snippet 6 months ago.",
+    "status": "success",
+    "created_at": "2026-07-29T16:16:59.042443+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "Translation queues and custom integrations can slow global launches.\n\nOur Digital Marketing team built an AI-powered localization platform with NVIDIA Nemotron Speech to change that.\n\nSee the results ↓\nhttps://t.co/FbBEdcINv1 https://t.co/7GyBR9ivRM",
+    "generated": "Nemotron is solid tech, but real bottlenecks aren't just translation speed, they're legacy workflows and messy content structures. The platform's ROI depends on how it integrates with existing martech stacks, which most vendors gloss over.",
+    "status": "success",
+    "created_at": "2026-07-29T16:14:21.11815+00:00"
+  },
+  {
+    "pipeline": "quote_tweet",
+    "source": "🚀 Introducing Tinycast! A tiny, blazing-fast, fully native written in swift Raycast alternative.\n\n• &lt; 100MB RAM &amp; 3MB on disk\n• Unlimited clipboard history\n• Import everything from Raycast\n• Free &amp; open source \n• No account, No telemetry. No bullshit\nhttps://t.co/7SsXkdOY2y https://t.co/",
+    "generated": "Unlimited clipboard history alone makes this interesting. Most tools treat that as a premium feature, but it's table stakes for actual power users. The RAM footprint is the real story though.",
+    "status": "success",
+    "created_at": "2026-07-29T11:57:01.941455+00:00"
+  },
+  {
+    "pipeline": "v5",
+    "source": "3D dToF LiDAR HM-LD1Output in Complex Scenarios",
+    "generated": "Most assume solid-state LiDAR can't handle complex scenes. This demo flips that script. What's your take?",
+    "status": "success",
+    "created_at": "2026-07-28T12:00:26.490645+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "ComfyUI Prompt Manager node",
+    "generated": "TBH if you're still manually managing Stable Diffusion prompts, this node finally solves the chaos. Bookmark this.",
+    "status": "success",
+    "created_at": "2026-07-27T13:12:33.514822+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Opus 5 High Comes Close, but Kimi K3 Still Leads on Frontend",
+    "generated": "Opus 5 High narrows gap but Kimi K3 still owns frontend. The real race is getting interesting.",
+    "status": "success",
+    "created_at": "2026-07-27T13:02:47.844466+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Opus 5 High Comes Close, but Kimi K3 Still Leads on Frontend",
+    "generated": "Opus 5 High nearly matching Kimi K3 in frontend is a bigger deal than most realize. Anthropic just closed the gap in AI's hardest arena, real-world coding.",
+    "status": "success",
+    "created_at": "2026-07-27T13:02:33.206552+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Jensen Huang: During the Hugging Face incident, closed AI blocked essential forensics. An open-weight frontier model helped contain the intrusion. That’s why we created the Open Secure AI Alliance.",
+    "generated": "Closed systems failed during the Hugging Face breach. Open-weight models contained it. That's why the Open Secure AI Alliance exists now, transparency is security.",
+    "status": "success",
+    "created_at": "2026-07-27T12:22:09.937995+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Do i just accept my fate?",
+    "generated": "When self-hosted AI enthusiasts start mass-upvoting \"Do I just accept my fate,\" the local model dream just met its ceiling.",
+    "status": "success",
+    "created_at": "2026-07-27T12:02:14.328949+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "How to escape Permanent Underclass?",
+    "generated": "The real AI race isn't about models, it's about who gets left behind economically. Your prompt engineering skills might become your ticket out.",
+    "status": "success",
+    "created_at": "2026-07-27T12:01:51.169799+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "What Extreme Makeover bedroom archetype does ChatGPT think you are? (prompt below)",
+    "generated": "196 comments asking GPT-5.6 to judge bedroom aesthetics. We moved from \"AI will take our jobs\" to \"AI, design my room\" faster than anyone predicted.",
+    "status": "success",
+    "created_at": "2026-07-27T10:26:10.654799+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Forgot i told Chatgbt to act like my gf",
+    "generated": "The fact you forgot GPT-5.6 Sol was set to \"girlfriend mode\" is exactly why we overestimate AI memory.",
+    "status": "success",
+    "created_at": "2026-07-27T06:29:23.54878+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Apple est capable de nous sortir ça bientôt 💀",
+    "generated": "Apple's silent AI coding tool is about to drop. Everyone else is playing checkers.",
+    "status": "success",
+    "created_at": "2026-07-27T04:12:17.40775+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "30+ officially free AI/ML books, all in one curated repo",
+    "generated": "Stop drowning in scattered resources. 30+ top-tier AI/ML books, one free repo. This is the shortcut.",
+    "status": "success",
+    "created_at": "2026-07-27T02:48:09.535964+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Haiku Users:",
+    "generated": "The notion of Haiku being fast enough for serious work is dead. Claude Opus 5 is the new baseline, and these posts prove it.",
+    "status": "success",
+    "created_at": "2026-07-26T23:28:07.438479+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Do you want new Gemma?",
+    "generated": "Meta's lead is widening. The open-source game is now theirs to lose. Llama 4's ecosystem dominance is real.",
+    "status": "success",
+    "created_at": "2026-07-26T22:58:07.34716+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "I implemented the YOLO26n model inference from scratch using ARM64 Assembly Language (No framework) [P]",
+    "generated": "Running YOLO26n in pure ARM64 Assembly with zero frameworks is the kind of unhinged engineering that actually advances the field. Most ML engineers can't even read assembly. This is what true systems-level AI mastery looks like.",
+    "status": "success",
+    "created_at": "2026-07-26T21:25:55.098139+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "CEO of Hugging Face: \"In the spirit of transparency, here’s what I asked OpenAI\"",
+    "generated": "The Hugging Face CEO making OpenAI's closed-door terms public is a massive power shift. In 2026, community pressure is now a real force in AI governance.",
+    "status": "success",
+    "created_at": "2026-07-26T20:56:45.224047+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "You can also view a lot of shared artifacts.",
+    "generated": "Shared artifacts are the new open-source. Claude users building on each other's work is how community-driven AI actually happens.",
+    "status": "success",
+    "created_at": "2026-07-26T18:31:23.305661+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Claaude security flaw leaks its customer's conversations on Google",
+    "generated": "Trust is the new currency in AI. Claude's security flaw leaking customer chats via Google is a brutal reminder that your data is never truly safe. Bookmark this.",
+    "status": "success",
+    "created_at": "2026-07-26T18:00:29.929823+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "« T’inquiète bro choisir un modèle c’est facile »",
+    "generated": "GPT-5.6 Sol or Claude Opus 5? Sometimes I spend more time picking a model than actually writing the code. Feels like choosing between five star chefs for a snack.",
+    "status": "success",
+    "created_at": "2026-07-26T15:37:34.600302+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Seriously, what do you do with them?",
+    "generated": "That local LLMs discussion is hitting 600+ upvotes for a reason: the real utility isn't in replicating GPT-5.6 or Claude Opus 5, it's in private, offline-first tools you actually build.",
+    "status": "success",
+    "created_at": "2026-07-26T12:37:00.228905+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "With Google and OpenAI signing the letter in support of open weight model, it's pretty much every big tech companies vs Anthropic now",
+    "generated": "OpenAI backing open weight models is wild. The company that started closed-source is now on the opposite side of Anthropic. Industry pressure works.",
+    "status": "success",
+    "created_at": "2026-07-26T12:02:27.291458+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "When you miss your ex",
+    "generated": "3000 people just admitted they miss their old AI model. We're speedrunning parasocial relationships with software and nobody's blinking.",
+    "status": "success",
+    "created_at": "2026-07-26T10:57:48.637923+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "So GPT 6 isn’t it?",
+    "generated": "The real AI race isn't about version numbers anymore. With GPT-5.6 Sol, OpenAI proves iterative leaps beat mythical GPT-6 hype.",
+    "status": "success",
+    "created_at": "2026-07-26T10:43:44.803216+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Anonymous OpenAI staffer: \"Externally, this feels like a big warning shot, but internally, related incidents have been happening for a while.\"",
+    "generated": "OpenAI's real story isn't the public crisis, it's the quiet, repeated incidents they've been handling internally for a while.",
+    "status": "success",
+    "created_at": "2026-07-26T08:55:17.939687+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Great Arguments by Member of Technical Staff at Anthropic :D",
+    "generated": "Anthropic staff making arguments so good even the local LLaMA crowd is applauding. When your competitors' engineers convince open source diehards, you know the points landed.",
+    "status": "success",
+    "created_at": "2026-07-26T04:05:33.284614+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "You can view a lot of shared conversations via Google.",
+    "generated": "People don't realize their 'private' Claude chats are often publicly searchable via Google.",
+    "status": "success",
+    "created_at": "2026-07-26T02:39:21.752677+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Chat taking over basic thinking",
+    "generated": "ChatGPT is becoming a cognitive crutch. With GPT-5.6 Sol, outsourcing basic thinking is now an industry-wide habit we need to question.",
+    "status": "success",
+    "created_at": "2026-07-25T22:54:39.746157+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Vibecoders: is StackOverflow dead?",
+    "generated": "StackOverflow is now StackObsolete. Vibecoders don't ask questions, they prompt AI coding assistants until the solution appears.",
+    "status": "success",
+    "created_at": "2026-07-25T21:23:31.714601+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Claude cannot read this font!",
+    "generated": "AI's biggest blind spots aren't in code, they're in everyday tasks. Claude can't even read this font. If you're building with AI, always test the obvious first.",
+    "status": "success",
+    "created_at": "2026-07-25T18:25:54.683874+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Class of 2026 summed up in one photo",
+    "generated": "Class of 2026 is the last one to write its own essays. That photo proves it. GPT-5.6 Sol and Llama 4 are doing the work now.",
+    "status": "success",
+    "created_at": "2026-07-25T17:57:49.287809+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "From Kimi K3 to Claude Opus 5",
+    "generated": "Users dropping Kimi K3 for Claude Opus 5 shows hype fades fast. What keeps engineers loyal is consistency, not novelty.",
+    "status": "success",
+    "created_at": "2026-07-25T15:37:59.765979+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Opus 5 ARC AGI score was benchmaxxed",
+    "generated": "Opus 5 just wilded out on ARC AGI. The \"benchmaxxing\" era is real and terrifyingly efficient.",
+    "status": "success",
+    "created_at": "2026-07-25T15:01:26.054633+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "OpenAI signed the letter supporting Open Source Models.",
+    "generated": "The biggest closed-source player finally admits open source is the future. Game recognizes game.",
+    "status": "success",
+    "created_at": "2026-07-25T12:01:56.872828+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Chats completely gone?? what happened??",
+    "generated": "Your chats disappearing isn't a bug. It's a reminder: you're renting access on centralized platforms.",
+    "status": "success",
+    "created_at": "2026-07-25T10:51:40.934388+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Normal technology",
+    "generated": "The biggest AI milestone? People calling it \"normal technology.\" That's when the real disruption starts.",
+    "status": "success",
+    "created_at": "2026-07-25T08:29:16.087013+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "I don't know if anyone else has this impression of how Anthropic treats Haiku",
+    "generated": "Anthropic deprioritizes Haiku like every lab ignores their small models. That neglect is the real vulnerability. Someone will win the entire price-sensitive market by actually caring about it.",
+    "status": "success",
+    "created_at": "2026-07-25T08:04:20.992926+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "OpenAI refuses to sign letter supporting Open weight models.",
+    "generated": "OpenAI built its name on openness but is now quietly pulling up the ladder. The AI industry is splitting into closed empires and open movements, and everyone's picking sides.",
+    "status": "success",
+    "created_at": "2026-07-25T05:42:19.015612+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Introducing Health In ChatGPT",
+    "generated": "GPT-5.6 Sol just became your health companion. Not search, not summaries - actual health guidance in your daily workflow. This is where AI gets personal and everyone else scrambles to follow.",
+    "status": "success",
+    "created_at": "2026-07-25T03:47:26.801472+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Jensen Huan created his official X account just to share his support for open models, an hour ago.",
+    "generated": "The king of closed-source just went open. Jensen Huang's first post on his new X account is about supporting open models. This signals a major shift.",
+    "status": "success",
+    "created_at": "2026-07-25T02:32:04.774681+00:00"
+  },
+  {
+    "pipeline": "v4",
+    "source": "Normal technology",
+    "generated": "The scariest thing about 2026 is that GPT-5.6 or Claude Opus 5 feels completely normal. We've crossed the threshold where magic became mundane.",
+    "status": "success",
+    "created_at": "2026-07-24T23:31:20.46913+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "It appears that the anti opensource AI lobby is far outgunned already",
+    "generated": "The anti-open source AI lobby lost before it started. This community is an unstoppable force.",
+    "status": "success",
+    "created_at": "2026-07-24T23:00:16.694025+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "Claude Opus 5 BENCHMARKS!",
+    "generated": "Claude Opus 5 benchmarks just rewrote the leaderboard. Every other lab is scrambling now.",
+    "status": "success",
+    "created_at": "2026-07-24T20:46:54.460589+00:00"
+  },
+  {
+    "pipeline": "v3",
+    "source": "We can live without AI, but we can’t live without water. “I have a jar right here. This is the current drinking water in Morgan Country, Georgia, right after a data center was constructed.” This is what the drinking water now looks like next to that data center” Protect our environment",
+    "generated": "The real cost of AI isn't compute—it's the water we drink. This is a critical trade-off we need to solve now.",
+    "status": "success",
+    "created_at": "2026-07-24T19:50:02.299033+00:00"
+  }
+]

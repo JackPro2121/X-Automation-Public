@@ -1,0 +1,218 @@
+[
+  {
+    "pipeline": "catchup",
+    "source": "For the first time since 1950, the Atlantic has made it past September 11 without a hurricane [OC]",
+    "oldText": "__ERR__ too short (0)",
+    "newText": "__ERR__ too short (0)",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v6",
+    "source": "We’re collaborating with @MusicHackspace to bring developers and sound obsessives together in Montreal for a 48-hour hackathon, in partnership with MUTEK, from August 22–23. https://t.co/CVcUgg1mWl",
+    "oldText": "The convergence of MUTEK and hackathon culture signals that we are finally moving past the era of pure LLM text generation toward specialized, high-fidelity generative audio models. Integrating sound obsessives into the dev workflow is the only way to solve the current lack of nuance in AI-generated sonic textures. These 48-hour sprints will produce the tools that actually make generative audio useful for professional production.",
+    "newText": "48 hours is the duration, but if you look at the commitment required, it is actually 2,880 minutes of total engagement time. People assume these hackathons are just about the social networking, but my read is that the math exposes a massive barrier to entry for professional engineers. When you divide the time by the goal of building a functional prototype, you are looking at an aggressive, high-pressure sprint rather than a casual collaboration. You cannot ship meaningful audio infrastructure in that window without sacrificing depth for pure velocity.",
+    "o": {
+      "hasDelta": false,
+      "reasoned": false,
+      "novelFigure": false,
+      "ambiguous": false,
+      "novelNumbers": [],
+      "markers": [],
+      "vocabularyBorrowed": 0.116,
+      "reason": "no reasoned or computed content detected — reads as a summary"
+    },
+    "n": {
+      "hasDelta": true,
+      "reasoned": true,
+      "novelFigure": false,
+      "ambiguous": false,
+      "novelNumbers": [],
+      "markers": [
+        "the math",
+        "my read",
+        "my read is"
+      ],
+      "vocabularyBorrowed": 0,
+      "reason": "reasons rather than restates (marker: \"the math\")"
+    },
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v4",
+    "source": "ComfyUI Prompt Manager node",
+    "oldText": "The sudden wave of ComfyUI nodes for prompt management proves that we are still treating generative AI like a sophisticated search engine rather than a true reasoning engine. Instead of building endless custom UI wrappers to organize our text inputs, the real engineering frontier is in automating the latent space navigation itself. Until we bridge this gap, our complex workflows are just glorified filing cabinets for words that models should already understand.",
+    "newText": "Convenience always extracts a tax on composability, and centralizing prompt management inside a custom ComfyUI node is no exception. While keeping your system prompts and variables in one UI block feels clean, my read is that this architecture silently breaks external API orchestration and version control. You are effectively locking valuable prompt metadata into proprietary JSON workflows that git can't easily parse or diff, making team-based collaboration on complex pipelines far harder. The immediate losers here are enterprise teams trying to build reproducible, code-first generative pipelines outside of a single designer's local canvas.",
+    "o": {
+      "hasDelta": false,
+      "reasoned": false,
+      "novelFigure": false,
+      "ambiguous": false,
+      "novelNumbers": [],
+      "markers": [],
+      "vocabularyBorrowed": 0.044,
+      "reason": "no reasoned or computed content detected — reads as a summary"
+    },
+    "n": {
+      "hasDelta": true,
+      "reasoned": true,
+      "novelFigure": false,
+      "ambiguous": false,
+      "novelNumbers": [],
+      "markers": [
+        "my read",
+        "my read is"
+      ],
+      "vocabularyBorrowed": 0.048,
+      "reason": "reasons rather than restates (marker: \"my read\")"
+    },
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v3",
+    "source": "Opus 5 High Comes Close, but Kimi K3 Still Leads on Frontend",
+    "oldText": "The obsession with Opus 5 and Kimi K3 benchmarks ignores the real bottleneck for AI engineers: context window reliability during complex frontend refactoring. We are hitting a ceiling where raw performance numbers matter less than the model's ability to maintain state across thousands of lines of legacy code without hallucinating CSS variables. Improving the frontend developer experience requires better reasoning chains, not just higher rankings on a leaderboard.",
+    "newText": "Delusion defines the current consensus that frontend LLM supremacy is a moving target chasing zero-shot logic capabilities. While Opus 5 bridges the reasoning gap, it ignores that frontend development is an exercise in state management and DOM reconciliation, not just code generation. My read is that Kimi K3's lead persists because it treats the component tree as a persistent graph rather than a series of isolated tokens. By effectively commoditizing the writing of boilerplate, we have inadvertently made the actual architecture of UI state the primary bottleneck, rendering pure reasoning models obsolete for anyone building complex, interactive interfaces.",
+    "o": {
+      "hasDelta": false,
+      "reasoned": false,
+      "novelFigure": false,
+      "ambiguous": false,
+      "novelNumbers": [],
+      "markers": [],
+      "vocabularyBorrowed": 0.065,
+      "reason": "no reasoned or computed content detected — reads as a summary"
+    },
+    "n": {
+      "hasDelta": true,
+      "reasoned": true,
+      "novelFigure": false,
+      "ambiguous": false,
+      "novelNumbers": [],
+      "markers": [
+        "my read",
+        "my read is"
+      ],
+      "vocabularyBorrowed": 0.05,
+      "reason": "reasons rather than restates (marker: \"my read\")"
+    },
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "catchup",
+    "source": "[Showoff Saturday] Redis City - 3D map of Redis internals",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v4",
+    "source": "Opus 5 High Comes Close, but Kimi K3 Still Leads on Frontend",
+    "oldText": "__ERR__ empty",
+    "newText": "Believing that Kimi K3's current frontend lead is a sustainable moat ignores the impending commoditization of UI generation via standardized API-to-component pipelines. The industry is cheering for a frontend king, but the actual consequence of this bottleneck is that high-fidelity frontend code is becoming a zero-margin utility, effectively killing the value of custom component libraries. My read is that while K3 holds the crown today, it is inadvertently accelerating the transition toward a world where UI is generated on-the-fly from state schemas, rendering hand-crafted frontend expertise a legacy skill set rather than a competitive advantage. The real losers here aren't the competing models, but the developers who have staked their careers on framework-specific optimization.",
+    "o": null,
+    "n": {
+      "hasDelta": true,
+      "reasoned": true,
+      "novelFigure": false,
+      "ambiguous": false,
+      "novelNumbers": [],
+      "markers": [
+        "my read",
+        "my read is"
+      ],
+      "vocabularyBorrowed": 0.043,
+      "reason": "reasons rather than restates (marker: \"my read\")"
+    },
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v3",
+    "source": "Jensen Huang: During the Hugging Face incident, closed AI blocked essential forensics. An open-weight frontier model helped contain the intrusion. That’s why we created the Open Secure AI Alliance.",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I miss the printed magazines days",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v4",
+    "source": "Do i just accept my fate?",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v3",
+    "source": "How to escape Permanent Underclass?",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I got home from work today watched a video on Opera GX went to make food came back and now every time I try to load a tab it partially loads and then just locks up",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v4",
+    "source": "What Extreme Makeover bedroom archetype does ChatGPT think you are? (prompt below)",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "v3",
+    "source": "Forgot i told Chatgbt to act like my gf",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  },
+  {
+    "pipeline": "catchup",
+    "source": "I built free, open-source image and video editors you can use in your browser",
+    "oldText": "__ERR__ empty",
+    "newText": "__ERR__ empty",
+    "o": null,
+    "n": null,
+    "oFab": false,
+    "nFab": false
+  }
+]

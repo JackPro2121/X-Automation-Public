@@ -1,0 +1,39 @@
+{
+  "name": "x-automation-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview",
+    "typecheck": "tsc --noEmit",
+    "test:cron": "node cron/lib/groqClient.test.js && node cron/lib/originality.test.js && node cron/lib/infoDelta.test.js && node cron/lib/guards.test.js && node cron/lib/replyGuards.test.js && node cron/lib/limitsDrift.test.js && node cron/lib/resolvePublishImage.test.js && node cron/lib/telemetry.test.js && node cron/v8/viral_magnet_generator.test.js",
+    "test:visuals": "node cron/lib/visualFactory.test.js",
+    "test:imports": "node scratch/check_imports.mjs cron/auto_reply.js cron/seed_and_post.js cron/v4/seed_and_post.js cron/v6/seed_and_post.js cron/daily_catchup.js cron/v8/publish_magnet.js cron/v7/reply_generator.js cron/v8/viral_magnet_generator.js cron/lib/groqClient.js cron/lib/utils.js cron/lib/bufferClient.js cron/auto_poster.js",
+    "test": "npm run test:imports && npm run test:cron && npm run test:visuals",
+    "verify:models": "node cron/verify_models.js",
+    "demo:visuals": "node cron/lib/visualFactory.js",
+    "calibrate:delta": "node scratch/calibrate_delta.mjs",
+    "calibrate:guards": "node scratch/check_new_guards.mjs",
+    "ab:prompt": "node scratch/ab_prompt.mjs --n 14 --show"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.8",
+    "dotenv": "^17.4.2",
+    "lucide-react": "^0.344.0",
+    "playwright": "^1.63.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  }
+}

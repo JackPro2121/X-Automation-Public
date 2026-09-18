@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env
+.env
+*.env
+.env.*
+x-config.env
+tools/x-cookie-exporter/X-cookies/
+
+# Secrets (NEVER commit)
+SECRETS.md
+
+GITHUB_ACCESS.md
+APIFY_KEYS_GUIDE.md
+
+# Local agent working state — session memory logs, not project source.
+# Never public (see GITHUB_ACCESS.md §4), and not useful as backup either.
+.workbuddy-ai/
+.agents/
+.mimocode/

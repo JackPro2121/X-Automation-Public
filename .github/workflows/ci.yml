@@ -1,0 +1,67 @@
+name: "CI — Cron Regression Suite"
+
+# Runs the cron test suite on every push and pull request. These tests encode
+# real production defects (silent 450-char truncation, published template
+# placeholders, dead Groq tiers, daily post repeats), so a failure here means a
+# regression that previously reached the live account.
+# See AUDIT_2026-09-15.md.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        # Required by the visual factory tests (original post visuals).
+        run: npx playwright install chromium --with-deps
+
+      - name: Syntax-check every cron entrypoint
+        run: |
+          set -e
+          for f in $(git ls-files 'cron/**/*.js' 'cron/*.js'); do
+            node --check "$f"
+          done
+          echo "All cron files parse cleanly."
+
+      - name: Run full test suite (logic + visuals)
+        env:
+          # Production configuration for @M_jawad_yasin (X Premium).
+          # tweetLimits.js reads this at module load; the suite asserts the
+          # premium length invariants, so it must be set here.
+          X_PREMIUM: 'true'
+        run: npm test
+
+      - name: Model health check
+        # Non-fatal: model IDs churn, and this reports WHICH tier degraded so a
+        # human can act. It does not block the build, because a third-party
+        # outage should not fail CI. Run locally with `npm run verify:models`.
+        continue-on-error: true
+        env:
+          X_PREMIUM: 'true'
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: npm run verify:models

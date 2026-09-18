@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>X Session Cookie Exporter</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      width: 360px;
+      background-color: #0b0f17;
+      color: #f1f5f9;
+      padding: 18px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .logo {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #1d9bf0, #8b5cf6);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 16px;
+      color: #fff;
+    }
+    .title-box h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+    }
+    .title-box p {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .status-badge.online {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+    }
+    .status-badge.offline {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #f87171;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .cookies-list {
+      background: #131b2a;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+    }
+    .cookie-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      padding: 4px 0;
+    }
+    .cookie-name {
+      color: #94a3b8;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .cookie-val {
+      color: #38bdf8;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 600;
+    }
+    .btn {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.18s ease;
+      margin-bottom: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #1d9bf0, #0284c7);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(29, 155, 240, 0.35);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #38bdf8, #1d9bf0);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #334155;
+    }
+    .btn-secondary:hover {
+      background: #334155;
+      color: #ffffff;
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+    .toast {
+      padding: 8px 12px;
+      background: #064e3b;
+      color: #a7f3d0;
+      border: 1px solid #059669;
+      border-radius: 6px;
+      font-size: 11px;
+      text-align: center;
+      margin-top: 10px;
+      display: none;
+      font-weight: 500;
+    }
+    .instructions {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #64748b;
+      line-height: 1.5;
+      border-top: 1px solid #1e293b;
+      padding-top: 10px;
+    }
+    .instructions strong {
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">𝕏</div>
+    <div class="title-box">
+      <h1>X Cookie Exporter</h1>
+      <p>Session Authenticator for Sniper v7</p>
+    </div>
+  </div>
+
+  <div id="statusBadge" class="status-badge offline">
+    <div class="dot"></div>
+    <span id="statusText">Checking X session...</span>
+  </div>
+
+  <div class="cookies-list" id="cookiesSummary">
+    <div class="cookie-row">
+      <span class="cookie-name">auth_token:</span>
+      <span class="cookie-val" id="authVal">Checking...</span>
+    </div>
+    <div class="cookie-row">
+      <span class="cookie-name">ct0 (csrf):</span>
+      <span class="cookie-val" id="ct0Val">Checking...</span>
+    </div>
+  </div>
+
+  <button id="copyJsonBtn" class="btn btn-primary" disabled>
+    📋 Copy for GitHub Secrets (X_COOKIES)
+  </button>
+
+  <button id="copyEnvBtn" class="btn btn-secondary" disabled>
+    ⚙️ Copy for .env.local
+  </button>
+
+  <div id="toast" class="toast">
+    ✓ Copied to clipboard! Ready to paste into GitHub Secrets.
+  </div>
+
+  <div class="instructions">
+    <strong>How to use:</strong><br>
+    1. Make sure you are logged in to <a href="https://x.com" target="_blank" style="color: #38bdf8; text-decoration: none;">x.com</a> in this browser.<br>
+    2. Click <strong>Copy for GitHub Secrets</strong>.<br>
+    3. Paste as <code>X_COOKIES</code> in GitHub Actions Secrets.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
