@@ -1,0 +1,88 @@
+name: "X Repo Spotlight (v9) — Open-Source AI Architecture Teardown (3x Daily)"
+
+on:
+  schedule:
+    - cron: '0 14,18,21 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # All X posting paths share one queue. This prevents simultaneous publishes.
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-v9-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        # v9 screenshots the repo page with Chromium, and falls back to the
+        # visual factory when the capture fails. Both need the browser.
+        run: npx playwright install chromium --with-deps
+
+      # Gate: a regression must never reach the live account. Same contract as
+      # every other posting workflow — tests fail, publishing is skipped.
+      - name: Run Test Suite (logic gates)
+        env:
+          X_PREMIUM: 'true'
+        run: npm run test:imports && npm run test:cron
+
+      - name: Run v9 Repo Spotlight Pipeline
+        env:
+          X_PREMIUM: 'true'
+          # GitHub Search API — the auto-provided token raises the rate limit
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Supabase (dedup / run log / media bucket)
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Buffer publishing
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          DIRECT_X_PUBLISH_ENABLED: 'false'
+          # Ollama Cloud (Primary Writer — gemma4:31b)
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+          OLLAMA_MODEL: ${{ secrets.OLLAMA_MODEL || 'gemma4:31b' }}
+          # Gemini Keys (Secondary Writer)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          # OpenRouter Keys (Tertiary Writer)
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          # Groq Keys (Quaternary Fallback)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          # Slack Alerts
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: node cron/v9/repo_spotlight.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v9 Repo Spotlight pipeline failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}

@@ -1,0 +1,56 @@
+/**
+ * Shared constants for all cron pipelines.
+ * Single source of truth — imported by seed_and_post.js, v4/*, and auto_poster.js.
+ */
+
+/** Separator used to split multi-tweet threads in generated_text column. */
+export const TWEET_BREAK = '===TWEET_BREAK===';
+
+export const IS_X_PREMIUM = process.env.X_PREMIUM === 'true';
+
+/**
+ * Character limits are owned by `cron/tweetLimits.js` — re-exported here so there
+ * is exactly ONE source of truth. This file previously declared its own
+ * `X_SAFE_MAX_CHARS = 24000` while `tweetLimits.js` declared `1200`, which is how
+ * a silent 450-char truncation survived in production. See AUDIT_2026-09-15.md §1.
+ *
+ * Do NOT re-declare these here.
+ */
+export { X_MAX_CHARS, X_SAFE_MAX_CHARS, TWEET_TARGET_CHARS, THREAD_TWEET_TARGET_CHARS } from '../tweetLimits.js';
+
+/** Buffer GraphQL API endpoint. */
+export const BUFFER_API_URL = 'https://api.buffer.com';
+
+/** Per-request timeout for Buffer API calls (ms). */
+export const BUFFER_TIMEOUT_MS = 30000;
+
+/** Max retry attempts in auto_poster before marking a post as permanently failed. */
+export const MAX_RETRIES = 3;
+
+/**
+ * Dedup window in hours.
+ * Reddit "hot" posts can stay visible for 2-3 days, so 72h prevents re-posting.
+ * Previous value was 24h which was too short.
+ */
+export const DEDUP_WINDOW_HOURS = 72;
+
+/** Single source of truth for the daily post ceiling.
+ * Used by the shared Slack templates so every notification reports the same
+ * target instead of hardcoded /40 or /50 values.
+ * Owner updated: target reduced to 4/day (quality over quantity, ranking mode).
+ */
+export const DAILY_TARGET = 4;
+
+/** GraphQL mutation for creating a single Buffer post. */
+export const BUFFER_SINGLE_MUTATION = `
+  mutation CreatePost($input: CreatePostInput!) {
+    createPost(input: $input) {
+      ... on PostActionSuccess {
+        post { id text status }
+      }
+      ... on MutationError {
+        message
+      }
+    }
+  }
+`;

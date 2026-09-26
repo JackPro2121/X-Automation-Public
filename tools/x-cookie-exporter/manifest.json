@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "X (Twitter) Session Cookie Exporter",
+  "version": "1.0.0",
+  "description": "1-click export your X auth_token and ct0 cookies for X-Automation Sniper",
+  "permissions": [
+    "cookies"
+  ],
+  "host_permissions": [
+    "*://*.x.com/*",
+    "*://*.twitter.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Export X Cookies"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
