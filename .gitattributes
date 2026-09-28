@@ -1,0 +1,17 @@
+# Normalize line endings so Windows checkouts stop producing phantom
+# "modified" files in `git status` (CRLF-only diffs with zero content change).
+* text=auto eol=lf
+
+# Windows-native scripts must keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Never touch binaries.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

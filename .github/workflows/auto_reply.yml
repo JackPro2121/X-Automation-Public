@@ -1,0 +1,106 @@
+# PAUSED 2026-09-19 — superseded by v9/v10. Restore the schedule block to re-enable.
+name: X Auto Quote-Tweet — Engage with Creators
+
+on:
+  # schedule:
+  #   # 2x/day — separate from content runs to keep the shared publisher queue clear.
+  #   # 15:30 and 19:30 UTC are US afternoon engagement windows.
+  #   - cron: '30 15,19 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # Every publishing workflow shares this queue to prevent concurrent X posts.
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-quote-tweet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # Gate the run on the logic suites. This pipeline produced 119 of 208 posts
+      # in the production corpus (57% of all output) and previously had NO test
+      # gate and NO finalizer at all. `test:imports` is included because
+      # `node --check` does not resolve imports — a bad named import passes syntax
+      # check and then crashes the cron run. Visuals are excluded: this pipeline
+      # does not render them.
+      - name: Run Test Suite (logic gates)
+        env:
+          X_PREMIUM: 'true'
+        run: npm run test:imports && npm run test:cron
+
+      - name: Run Auto Quote-Tweet Pipeline
+        env:
+          X_PREMIUM: 'true'
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          APIFY_API_KEY: ${{ secrets.APIFY_API_KEY }}
+          APIFY_API_KEY_2: ${{ secrets.APIFY_API_KEY_2 }}
+          APIFY_API_KEY_3: ${{ secrets.APIFY_API_KEY_3 }}
+          APIFY_API_KEY_4: ${{ secrets.APIFY_API_KEY_4 }}
+          APIFY_API_KEY_5: ${{ secrets.APIFY_API_KEY_5 }}
+          APIFY_API_KEY_6: ${{ secrets.APIFY_API_KEY_6 }}
+          APIFY_API_KEY_7: ${{ secrets.APIFY_API_KEY_7 }}
+          APIFY_API_KEY_8: ${{ secrets.APIFY_API_KEY_8 }}
+          APIFY_API_KEY_9: ${{ secrets.APIFY_API_KEY_9 }}
+          APIFY_API_KEY_10: ${{ secrets.APIFY_API_KEY_10 }}
+          APIFY_API_KEY_11: ${{ secrets.APIFY_API_KEY_11 }}
+          APIFY_API_KEY_12: ${{ secrets.APIFY_API_KEY_12 }}
+          APIFY_API_KEY_13: ${{ secrets.APIFY_API_KEY_13 }}
+          APIFY_API_KEY_14: ${{ secrets.APIFY_API_KEY_14 }}
+          APIFY_API_KEY_15: ${{ secrets.APIFY_API_KEY_15 }}
+          APIFY_API_KEY_16: ${{ secrets.APIFY_API_KEY_16 }}
+          APIFY_API_KEY_17: ${{ secrets.APIFY_API_KEY_17 }}
+          APIFY_API_KEY_18: ${{ secrets.APIFY_API_KEY_18 }}
+          APIFY_API_KEY_19: ${{ secrets.APIFY_API_KEY_19 }}
+          APIFY_API_KEY_20: ${{ secrets.APIFY_API_KEY_20 }}
+          APIFY_API_KEY_21: ${{ secrets.APIFY_API_KEY_21 }}
+          APIFY_API_KEY_22: ${{ secrets.APIFY_API_KEY_22 }}
+          APIFY_API_KEY_23: ${{ secrets.APIFY_API_KEY_23 }}
+          APIFY_API_KEY_24: ${{ secrets.APIFY_API_KEY_24 }}
+          APIFY_API_KEY_25: ${{ secrets.APIFY_API_KEY_25 }}
+          APIFY_API_KEY_26: ${{ secrets.APIFY_API_KEY_26 }}
+          APIFY_API_KEY_27: ${{ secrets.APIFY_API_KEY_27 }}
+          APIFY_API_KEY_28: ${{ secrets.APIFY_API_KEY_28 }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+        run: node cron/auto_reply.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ Quote-Tweet pipeline failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}

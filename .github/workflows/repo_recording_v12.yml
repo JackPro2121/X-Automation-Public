@@ -1,0 +1,163 @@
+name: "X Repo Screen Recording (v12) — GitHub Walkthrough Video (1x Daily)"
+
+on:
+  # LIVE as of 2026-09-28, after two validated manual runs queued to Buffer
+  # (6aba3a60 and 6aba599b) with no failures on the recording, framing, or
+  # content-gate stages.
+  #
+  # SLOT: 0 20 * * * — 20:00 UTC = 4:00 PM US Eastern / 9:00 PM UK.
+  #
+  # MOVED from `45 16` (16:45 UTC) on 2026-09-28, when v9 and v11 were reslotted
+  # to fix the shape of the day. v9 (three posts), v11 (one) and v12 (one) were
+  # clustered 14:00-16:45 and then left a three-hour dead zone to 21:00. The
+  # schedule is now an even two-hourly ramp:
+  #     14:00 v9  ·  16:00 v11  ·  18:00 v9  ·  20:00 v12  ·  22:00 v9
+  #
+  # v12 absorbed the largest move deliberately. v9 and v11 have proven slots and
+  # track records; v12 was one day old with no history to protect, and it is the
+  # pipeline least hurt by being reslotted because it only ever queues to Buffer
+  # and never publishes unattended. 20:00 UTC is a good video slot in its own
+  # right: after-work US afternoon, and UK prime-time evening.
+  #
+  # RESULTING DAILY SCHEDULE (all times UTC):
+  #     14:00  v9   repo spotlight      10:00 AM ET /  3:00 PM UK
+  #     16:00  v11  viral magnets       12:00 PM ET /  5:00 PM UK
+  #     18:00  v9   repo spotlight       2:00 PM ET /  7:00 PM UK
+  #     20:00  v12  screen recording     4:00 PM ET /  9:00 PM UK   <- this
+  #     22:00  v9   repo spotlight       6:00 PM ET / 11:00 PM UK
+  # = 5 posts/day total, evenly spread across the US/UK overlap, every
+  # neighbouring pair at least 2 hours apart.
+  #
+  # v12 stays SEPARATE from v9 on purpose: it has its own run log, its own
+  # failure path and its own metrics bucket, so a video regression cannot take
+  # the earning path down. It also still only queues to Buffer (V12_PUBLISH_MODE
+  # = addToQueue), so nothing reaches X without the video being seen first.
+  schedule:
+    - cron: '0 20 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # All X posting paths share one queue. Buffer enforces a per-channel
+  # publishing limit and X rate-limits aggressively on simultaneous writes.
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-v12-pipeline:
+    runs-on: ubuntu-latest
+    # Recording a real page over the network, transcoding, and uploading a few
+    # MB to Storage is meaningfully slower than the screenshot path. v9 uses 20
+    # and this needs more headroom, not less.
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # MANDATORY. Verified against the full actions/runner-images manifest for
+      # Ubuntu 24.04: ffmpeg is NOT part of the image (`mediainfo` is, which
+      # only reads metadata). Playwright's own bundled encoder cannot substitute
+      # — it was probed and exposes exactly one video encoder, libvpx/VP8, with
+      # no libx264 and no AAC. X rejects WebM outright, so a real ffmpeg with
+      # libx264 is the only way to produce a publishable MP4.
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffmpeg -version | head -1
+          # Fail loudly here rather than 40 seconds into the run.
+          ffmpeg -hide_banner -encoders 2>/dev/null | grep -q libx264 \
+            || { echo "::error::ffmpeg installed without libx264 — cannot produce H.264"; exit 1; }
+          echo "libx264 present"
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      # Gate: a regression must never reach the live account. Same contract as
+      # every other posting workflow — tests fail, publishing is skipped.
+      - name: Run Test Suite (logic gates)
+        env:
+          X_PREMIUM: 'true'
+        run: npm run test:imports && npm run test:cron
+
+      - name: Run v12 Repo Screen Recording Pipeline
+        env:
+          X_PREMIUM: 'true'
+          # GitHub Search API — the auto-provided token raises the rate limit
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Supabase (dedup / run log / video storage bucket)
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Buffer publishing
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          DIRECT_X_PUBLISH_ENABLED: 'false'
+          # Ollama Cloud (Primary Writer — gemma4:31b)
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+          OLLAMA_MODEL: ${{ secrets.OLLAMA_MODEL || 'gemma4:31b' }}
+          # Gemini Keys (Secondary Writer)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          # OpenRouter Keys (Tertiary Writer)
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          # Groq Keys (Quaternary Fallback)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          # Slack Alerts
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          # ── v12 knobs ──────────────────────────────────────────────────
+          # Raised from 1 to 5.
+          #
+          # This is a CEILING, not a target. Two hard limits still bound it:
+          # one post per run (the candidate loop breaks on first success) and the
+          # 90-minute cooldown below. So 5 means "up to 5 across a day across
+          # separate dispatches", not 5 in one go.
+          #
+          # It was raised so a new recording can be produced on a day that has
+          # already spent its slot. Note the account-wide picture: v9 caps at 3
+          # and v11 at 1, so the theoretical maximum across all three is now 9
+          # posts/day, which is more than double the DAILY_TARGET=4 recorded in
+          # cron/lib/constants.js. That ceiling was written when v12 did not
+          # exist. If X rate-limiting or feed quality becomes a problem, this
+          # is the first number to lower.
+          V12_DAILY_MAX: '5'
+          V12_MIN_GAP_MINUTES: '90'
+          # Queue, not publish. The recording lands in Buffer's queue so it can
+          # be watched and approved in the Buffer web UI before Buffer's
+          # scheduler releases it. Flip to 'shareNow' only once the format is
+          # trusted for unattended publishing.
+          V12_PUBLISH_MODE: 'addToQueue'
+          # Slow push-in. Off by default: it is the one effect that is purely
+          # decorative, and it is applied in the encoder rather than the DOM
+          # because a CSS transform left black bars at the frame edges.
+          V12_VIDEO_ZOOM: 'false'
+        run: node cron/v12/repo_recording.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v12 Repo Screen Recording pipeline failed on run ${{ github.run_id }} — v9 is unaffected.",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}

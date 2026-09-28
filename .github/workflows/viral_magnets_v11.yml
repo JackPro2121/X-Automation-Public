@@ -1,0 +1,104 @@
+name: "X Viral Conversation Magnets (v11) — AI Systems Notes (1x Daily)"
+
+on:
+  # Re-enabled 2026-09-27 after the three defects that made it unpublishable
+  # were fixed and measured. It was paused because every run failed; it now
+  # scores 8/8 publishable in a live generation probe.
+  #
+  #   1. isValidCandidate() scored prompt-leak output as a WINNER, so the
+  #      fallback chain never advanced past the broken primary model (0/5).
+  #   2. The Gemini tier read `res.text` on a client that returns a string, so
+  #      the only working writer was unreachable dead code.
+  #   3. maxTokens: 150 truncated generation mid-sentence; the shared budget is
+  #      now GENERATION_MAX_TOKENS (800), the same value every other path uses.
+  #
+  # 0 16 UTC = ~12:00 US Eastern / ~17:00 UK — inside the US+UK overlap.
+  #
+  # MOVED from `30 15` (15:30 UTC) on 2026-09-28, when v12 joined the schedule
+  # and the day's five posts were left unevenly distributed:
+  #     14:00 v9 ─90─ 15:30 v11 ─75─ 16:45 v12 ─75─ 18:00 v9 ───180── 21:00 v9
+  # Three posts crammed into 2h45m, then a three-hour dead zone — the worst
+  # possible shape for reach, because the feed looks quiet all evening and then
+  # spikes. The schedule is now an even two-hourly ramp:
+  #     14:00 v9  ·  16:00 v11  ·  18:00 v9  ·  20:00 v12  ·  22:00 v9
+  # This slot moved only 30 minutes, and 2 hours clear of v9's 14:00 post, so
+  # the 35-minute cooldown is still never contended.
+  #
+  # Total account output is now 5/day (v9 x3 + v11 x1 + v12 x1).
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # All X posting paths share one queue. This prevents simultaneous publishes.
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-v11-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # Gate: a regression must never reach the live account. Same contract as
+      # every other posting workflow — tests fail, publishing is skipped.
+      - name: Run Test Suite (logic gates)
+        env:
+          X_PREMIUM: 'true'
+        run: npm run test:imports && npm run test:cron
+
+      - name: Run v11 Viral Conversation Magnets Pipeline
+        env:
+          X_PREMIUM: 'true'
+          # Supabase (dedup / run log)
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Buffer publishing
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          DIRECT_X_PUBLISH_ENABLED: 'false'
+          # OpenRouter Keys (Primary Writer)
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          # Gemini Keys (Secondary Writer)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          # Groq Keys (Tertiary Fallback)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          # Slack Alerts
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          # Daily posting cap
+          V11_DAILY_MAX: '1'
+        run: node cron/v11/viral_prompts.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v11 Viral Conversation Magnets pipeline failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
