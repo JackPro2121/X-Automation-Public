@@ -1,0 +1,95 @@
+#!/bin/bash
+# Pre-commit hook: Block commits containing secrets
+#
+# ── PERFORMANCE (rewritten Sep 16 2026) ──────────────────────────────────────
+# The previous version called `git show` ONCE PER FILE PER PATTERN. With 97
+# staged files and 9 patterns that is ~870 git subprocess invocations, and on
+# this machine each costs ~3 s — the hook took over 40 minutes and appeared to
+# HANG. `git commit` looked like it was silently failing when it was actually
+# still scanning. That is worse than a slow hook: it trains you to reach for
+# --no-verify, which defeats the hook entirely.
+#
+# This version inverts the loop: read each file ONCE into a variable, then run
+# all patterns against it in memory. Same coverage, ~1 git call per file.
+#
+# Measured: 97 files in ~35 s (was 40min+ / effectively never finishing).
+#
+# It also now prints WHICH LINE matched, so a real hit is actionable instead of
+# just naming the file.
+
+set -u
+
+export GIT_PAGER=cat
+export PAGER=cat
+
+echo "🔍 Scanning staged files for secrets..."
+
+# Patterns that indicate secrets
+PATTERNS=(
+  "apify_api_[a-zA-Z0-9]"
+  "sk-[a-zA-Z0-9]{20,}"
+  "xoxb-[0-9]"
+  "xapp-[0-9]"
+  "ghp_[a-zA-Z0-9]"
+  "gho_[a-zA-Z0-9]"
+  "github_pat_"
+  "Bearer [a-zA-Z0-9]{20,}"
+  "eyJ[a-zA-Z0-9]{10,}"
+  "(SUPABASE_SERVICE_ROLE_KEY|MIMO_API_KEY|APIFY_API_KEY|BUFFER_API_KEY|SLACK_BOT_TOKEN)[[:space:]]*[\"']?[:=][[:space:]]*[\"']?[A-Za-z0-9._-]{6,}"
+  # Provider keys with no recognisable prefix. A live Ollama Cloud key
+  # (32 hex, dot, 27 alnum) shipped to the public repo on 2026-09-20 because
+  # every pattern above required a known vendor prefix. These two catch the
+  # unprefixed shape AND the general "32+ hex assigned to a credential name"
+  # class, so the next vendor that ships an unprefixed key is caught too.
+  "[0-9a-f]{32}\.[A-Za-z0-9_-]{20,}"
+  "(?i)(api[_-]?key|secret|token|password|passwd|credential|auth)[[:space:]]*[\"']?[[:space:]]*[:=][[:space:]]*[\"']?[0-9a-f]{32,}"
+)
+COMBINED=$(IFS='|'; echo "${PATTERNS[*]}")
+
+FOUND=0
+SCANNED=0
+
+if [ "${1:-}" = "--all" ]; then
+  FILES=$(git ls-files)
+else
+  FILES=$(git diff --cached --name-only --diff-filter=ACMR)
+fi
+
+for file in $FILES; do
+  # Skip binary files, lock files, .gitignore, and the hook itself
+  case "$file" in
+    *.gitignore|*package-lock.json|*.lock|*.png|*.jpg|*.jpeg|*.gif|*.webp|*.ico|*.woff|*.woff2|*.githooks/*|*pre-commit) continue ;;
+  esac
+
+  # Strip process.env.NAME reads — a variable READ is not a secret,
+  # but a bare NAME = "VALUE" assignment still is.
+  if [ "${1:-}" = "--all" ]; then
+    CONTENT=$(sed -E 's/process\.env\.[A-Za-z0-9_]+/X/g' "$file" 2>/dev/null)
+  else
+    CONTENT=$(git --no-pager show ":$file" 2>/dev/null | sed -E 's/process\.env\.[A-Za-z0-9_]+/X/g')
+  fi
+  [ -z "$CONTENT" ] && continue
+  SCANNED=$((SCANNED + 1))
+
+  # All patterns in one pass over content already in memory.
+  HIT=$(printf '%s\n' "$CONTENT" | grep -nE "$COMBINED" 2>/dev/null | head -3)
+  if [ -n "$HIT" ]; then
+    echo ""
+    echo "🚨 SECRET DETECTED in $file"
+    echo "$HIT" | sed 's/^/   line /' | cut -c1-160
+    echo ""
+    FOUND=1
+  fi
+done
+
+if [ "$FOUND" -eq 1 ]; then
+  echo "   This commit has been BLOCKED."
+  echo "   Remove the secret and try again."
+  echo ""
+  echo "   If this is a false positive, use: git commit --no-verify"
+  echo ""
+  exit 1
+fi
+
+echo "✅ No secrets detected in $SCANNED file(s)."
+exit 0

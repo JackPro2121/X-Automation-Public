@@ -1,0 +1,99 @@
+name: "X Repo Spotlight (v9) — Open-Source AI Architecture Teardown (3x Daily)"
+
+on:
+  # 0 14,18,22 UTC = ~10:00 / 14:00 / 18:00 US Eastern, ~15:00 / 19:00 / 23:00 UK.
+  #
+  # The 21:00 slot moved to 22:00 on 2026-09-28, when v12 joined the schedule.
+  # 14:00 and 18:00 are UNCHANGED and stay that way: v9 is the account's only
+  # healthy earning path with two weeks of green runs, so its proven slots are
+  # the last thing to touch. The day's five posts were also unevenly spread —
+  # three inside 2h45m followed by a three-hour dead zone — and the fix was an
+  # even two-hourly ramp, with the big move absorbed by v12 (one day old, no
+  # slot history) rather than by a proven pipeline:
+  #     14:00 v9  ·  16:00 v11  ·  18:00 v9  ·  20:00 v12  ·  22:00 v9
+  # Every neighbouring pair is now at least 2 hours apart.
+  schedule:
+    - cron: '0 14,18,22 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # All X posting paths share one queue. This prevents simultaneous publishes.
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-v9-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        # v9 screenshots the repo page with Chromium, and falls back to the
+        # visual factory when the capture fails. Both need the browser.
+        run: npx playwright install chromium --with-deps
+
+      # Gate: a regression must never reach the live account. Same contract as
+      # every other posting workflow — tests fail, publishing is skipped.
+      - name: Run Test Suite (logic gates)
+        env:
+          X_PREMIUM: 'true'
+        run: npm run test:imports && npm run test:cron
+
+      - name: Run v9 Repo Spotlight Pipeline
+        env:
+          X_PREMIUM: 'true'
+          # GitHub Search API — the auto-provided token raises the rate limit
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Supabase (dedup / run log / media bucket)
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Buffer publishing
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          DIRECT_X_PUBLISH_ENABLED: 'false'
+          # Ollama Cloud (Primary Writer — gemma4:31b)
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+          OLLAMA_MODEL: ${{ secrets.OLLAMA_MODEL || 'gemma4:31b' }}
+          # Gemini Keys (Secondary Writer)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          # OpenRouter Keys (Tertiary Writer)
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          # Groq Keys (Quaternary Fallback)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          # Slack Alerts
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: node cron/v9/repo_spotlight.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v9 Repo Spotlight pipeline failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}

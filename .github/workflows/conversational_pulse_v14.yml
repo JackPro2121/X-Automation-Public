@@ -1,0 +1,85 @@
+name: "X Conversational Pulse & Reply Magnets (v14) — Dan Ellison Formula (7x Daily)"
+
+on:
+  # Dan Ellison Conversational Formula across high-engagement evening, night & morning slots:
+  # 00:00, 02:00, 04:00, 06:00, 08:00, 10:00, 12:00 UTC (spaced 2 hours apart, perfectly
+  # clear of daytime pipelines v9 at 14/18/22, v11 at 16, v12 at 20).
+  schedule:
+    - cron: '0 0,2,4,6,8,10,12 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # All X posting paths share one queue to prevent simultaneous publishes
+  group: x-automation-publisher
+  cancel-in-progress: false
+
+jobs:
+  run-v14-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # Gate: a regression must never reach the live account
+      - name: Run Test Suite (logic gates)
+        env:
+          X_PREMIUM: 'true'
+        run: npm run test:imports && npm run test:cron
+
+      - name: Run v14 Conversational Pulse Pipeline
+        env:
+          X_PREMIUM: 'true'
+          # Supabase (dedup / run log)
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Buffer publishing
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          DIRECT_X_PUBLISH_ENABLED: 'false'
+          # Ollama Cloud (Primary Writer — gemma4:31b)
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+          OLLAMA_MODEL: ${{ secrets.OLLAMA_MODEL || 'gemma4:31b' }}
+          # OpenRouter Keys (Fallback Writer)
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY_2: ${{ secrets.OPENROUTER_API_KEY_2 }}
+          OPENROUTER_API_KEY_3: ${{ secrets.OPENROUTER_API_KEY_3 }}
+          # Gemini Keys (Fallback Writer)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          # Groq Keys (Fallback Writer)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          # Slack Alerts
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          # Daily posting cap (matches Dan Ellison 7-slot schedule)
+          V14_DAILY_MAX: '7'
+        run: node cron/v14/conversational_pulse.js
+
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "text": "❌ v14 Conversational Pulse pipeline failed on run ${{ github.run_id }}",
+              "unfurl_links": false
+            }'
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
